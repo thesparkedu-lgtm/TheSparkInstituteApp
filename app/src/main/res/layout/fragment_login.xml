@@ -1,0 +1,103 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9E5"
+    android:gravity="center_horizontal">
+
+    <!-- Welcome Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#FFD43B"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/spark_logo"
+        android:layout_gravity="center"
+        android:contentDescription="@string/spark_institute_logo"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/title_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+
+    <EditText
+        android:id="@+id/login_Email"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="16dp"
+        android:layout_marginHorizontal="24dp"
+        android:textColorHint="#AAA763"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/login_Password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/password"
+        android:paddingStart="16dp"
+        android:layout_marginHorizontal="24dp"
+        android:textColorHint="#AAA763"
+        android:textSize="16sp"
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/log_in"
+        android:backgroundTint="#FFD20A"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Sign up link -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/do_you_have_account"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/go_Signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:textColor="#FFD43B"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
