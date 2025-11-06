@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.thesparkinstituteapp.R
 
 class Explore_Fragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
 
 
     override fun onCreateView(
