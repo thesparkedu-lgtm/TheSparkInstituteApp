@@ -1,5 +1,6 @@
 package com.example.thesparkinstituteapp.loginandregister
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,9 +10,8 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.thesparkinstituteapp.Home.HomeFragment
+import com.example.thesparkinstituteapp.MainActivity
 import com.example.thesparkinstituteapp.R
-import com.example.thesparkinstituteapp.loginandregister.RegisterFragment
 import com.example.thesparkinstituteapp.sharedPre.SharedPrefHelper
 import com.google.firebase.auth.FirebaseAuth
 
@@ -32,7 +32,7 @@ class LoginFragment : Fragment() {
         val emailEt = view.findViewById<EditText>(R.id.login_Email)
         val passwordEt = view.findViewById<EditText>(R.id.login_Password)
         val loginBtn = view.findViewById<Button>(R.id.button_login)
-        val signupBtn = view.findViewById<TextView>(R.id.go_Signup)
+        val signupText = view.findViewById<TextView>(R.id.go_Signup) // your "Don't have an account?" text
 
         loginBtn.setOnClickListener {
             val email = emailEt.text.toString().trim()
@@ -49,25 +49,17 @@ class LoginFragment : Fragment() {
                         sharedPrefHelper.saveLoginState(true)
                         Toast.makeText(requireContext(), "Login successful", Toast.LENGTH_SHORT).show()
 
-                        parentFragmentManager.beginTransaction()
-                            .replace(R.id.fragment_container, HomeFragment())
-                            .commit()
+                        // Move to MainActivity after login
+                        startActivity(Intent(requireContext(), MainActivity::class.java))
+                        requireActivity().finish()
                     } else {
                         Toast.makeText(requireContext(), "Login failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                     }
                 }
         }
 
-        signupBtn.setOnClickListener {
-            Toast.makeText(requireContext(), "Opening Register", Toast.LENGTH_SHORT).show()
-
-            // Prevent crash when fragment already destroyed
-            if (isAdded && activity != null) {
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, RegisterFragment())
-                    .addToBackStack(null)
-                    .commitAllowingStateLoss()
-            }
+        signupText.setOnClickListener {
+            (activity as Login_Register_Activity).replaceFragment(RegisterFragment())
         }
 
         return view
