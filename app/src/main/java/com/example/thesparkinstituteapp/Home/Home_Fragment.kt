@@ -33,6 +33,13 @@ class HomeFragment : Fragment() {
 
         profileIcon.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.setCustomAnimations(
+                R.anim.fade_slide_in_left,
+                R.anim.fade_slide_out_left,
+                R.anim.fade_slide_in_right,
+                R.anim.fade_slide_out_right
+
+            )
             transaction.replace(R.id.fragment_container, ProfileFragment())
             transaction.addToBackStack(null)
             transaction.commit()
@@ -40,6 +47,13 @@ class HomeFragment : Fragment() {
 
         navodayaBtn.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.setCustomAnimations(
+                R.anim.fade_slide_in_left,
+                R.anim.fade_slide_out_left,
+                R.anim.fade_slide_in_right,
+                R.anim.fade_slide_out_right
+
+            )
             transaction.replace(R.id.fragment_container, Navodaya_Fragment())
             transaction.addToBackStack(null)
             transaction.commit()
@@ -47,6 +61,13 @@ class HomeFragment : Fragment() {
 
         competativaBtn.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.setCustomAnimations(
+                R.anim.fade_slide_in_left,
+                R.anim.fade_slide_out_left,
+                R.anim.fade_slide_in_right,
+                R.anim.fade_slide_out_right
+
+            )
             transaction.replace(R.id.fragment_container, Competative_Fragment())
             transaction.addToBackStack(null)
             transaction.commit()
@@ -54,6 +75,13 @@ class HomeFragment : Fragment() {
 
         computerBtn.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.setCustomAnimations(
+                R.anim.fade_slide_in_left,
+                R.anim.fade_slide_out_left,
+                R.anim.fade_slide_in_right,
+                R.anim.fade_slide_out_right
+
+            )
             transaction.replace(R.id.fragment_container, Computer_Fragment())
             transaction.addToBackStack(null)
             transaction.commit()
@@ -61,6 +89,13 @@ class HomeFragment : Fragment() {
 
         coachingBtn.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.setCustomAnimations(
+                R.anim.fade_slide_in_left,
+                R.anim.fade_slide_out_left,
+                R.anim.fade_slide_in_right,
+                R.anim.fade_slide_out_right
+
+            )
             transaction.replace(R.id.fragment_container, Coaching_Fragment())
             transaction.addToBackStack(null)
             transaction.commit()
