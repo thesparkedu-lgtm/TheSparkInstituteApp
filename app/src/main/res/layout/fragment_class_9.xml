@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <!-- Header Section -->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="#FFF8F0"
@@ -40,7 +40,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="16dp"/>
 
-        </RelativeLayout>
+        </LinearLayout>>
 
         <!-- Content Section -->
         <LinearLayout
