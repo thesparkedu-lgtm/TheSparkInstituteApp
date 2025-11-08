@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- Top Header Bar -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,6 +20,7 @@
             android:padding="16dp"
             android:gravity="center_vertical">
 
+            <!-- Logo Section -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -26,31 +28,31 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:src="@drawable/spark_logo"
-                    android:layout_marginEnd="8dp" />
+                    android:contentDescription="Spark Institute Logo"/>
 
             </LinearLayout>
 
+            <!-- Profile Icon -->
             <ImageView
                 android:id="@+id/profile"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@drawable/profile"
-                >
-            </ImageView>
-
-
+                android:contentDescription="Profile"/>
 
         </LinearLayout>
 
+        <!-- Spark Adds Banner -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
-            android:padding="6dp"
+            android:padding="8dp"
             android:gravity="center">
 
             <TextView
@@ -58,72 +60,94 @@
                 android:layout_height="wrap_content"
                 android:text="@string/spark_adds"
                 android:textSize="14sp"
-                android:textColor="#795548" />
+                android:textColor="#795548"/>
 
         </LinearLayout>
 
+        <!-- Company Banner Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/companyBannerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Company Advertisement Banner"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- All Courses Section Title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All Subjects"
+            android:text="All Courses"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#333333"
-            android:layout_margin="16dp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"/>
 
+        <!-- Course Cards Grid -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginHorizontal="16dp">
 
+            <!-- First Row: Navodaya and Competitive -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="12dp">
 
+                <!-- Navodaya Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="80dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="12dp"
-                    app:cardElevation="2dp"
-                    android:background="#FFF8E1">
+                    app:cardElevation="2dp">
 
                     <LinearLayout
                         android:id="@+id/NavodayaBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#FFF8E1"
-                        android:orientation="horizontal"
-                        android:padding="12dp"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/navodaya"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="#333333" />
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="bottom">
 
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp">
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="end|top"
+                            android:layout_marginBottom="8dp"
+                            android:contentDescription="Navodaya icon"/>
 
-                        </ImageView>
-
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/navodaya"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"/>
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
+                <!-- Competitive Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="80dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="12dp"
@@ -134,26 +158,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#E8EAF6"
-                        android:orientation="horizontal"
-                        android:padding="12dp"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/competitive"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="#333333" />
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="bottom">
 
                         <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="end|top"
+                            android:layout_marginBottom="8dp"
+                            android:contentDescription="Competitive icon"/>
 
-                            android:layout_width="56dp"
-                            android:layout_height="64dp">
-
-                        </ImageView>
-
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/competitive"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"/>
 
                     </LinearLayout>
 
@@ -161,14 +183,17 @@
 
             </LinearLayout>
 
+            <!-- Second Row: Computer and Coaching -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
 
+                <!-- Computer Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="80dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="12dp"
@@ -179,33 +204,33 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#FFE0E0"
-                        android:orientation="horizontal"
-                        android:padding="12dp"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Computer"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="#333333" />
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="bottom">
 
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp">
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="end|top"
+                            android:layout_marginBottom="8dp"
+                            android:contentDescription="Computer icon"/>
 
-                        </ImageView>
-
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Computer"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"/>
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
+                <!-- Coaching Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="80dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="12dp"
@@ -216,25 +241,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#E0F2F1"
-                        android:orientation="horizontal"
-                        android:padding="12dp"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Coaching"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="#333333" />
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="bottom">
 
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp">
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="end|top"
+                            android:layout_marginBottom="8dp"
+                            android:contentDescription="Coaching icon"/>
 
-                        </ImageView>
-
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Coaching"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"/>
 
                     </LinearLayout>
 
@@ -242,32 +266,117 @@
 
             </LinearLayout>
 
+            <!-- Third Row: Notes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Notes Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:id="@+id/NotesBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#D6E8FF"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="bottom">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="end|top"
+                            android:layout_marginBottom="8dp"
+                            android:contentDescription="Notes icon"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notes"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Empty space for alignment -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Spark Class"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#333333"
-            android:layout_margin="16dp" />
-
-        <androidx.cardview.widget.CardView
+        <!-- Spark Class Section -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Spark Class"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:id="@+id/viewAllText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View all"
+                android:textSize="14sp"
+                android:textColor="#7B68EE"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                android:contentDescription="Arrow right"/>
+
+        </LinearLayout>
+
+        <!-- Spark Free Classes Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sparkFreeClassCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="24dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="#2C2749"
                 android:orientation="horizontal"
-                android:padding="20dp">
+                android:padding="20dp"
+                android:minHeight="160dp">
 
+                <!-- Text Content -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -282,29 +391,45 @@
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
-                        android:layout_marginBottom="8dp" />
+                        android:layout_marginBottom="8dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Offline tuitions by Banarhat\nbest teachers"
+                        android:text="Online tuitions by Banarhat\nbest teachers"
                         android:textSize="14sp"
-                        android:textColor="#E0E0E0"
-                        android:lineSpacingExtra="2dp" />
+                        android:textColor="#B8BABD"
+                        android:lineSpacingExtra="2dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:id="@+id/freeClassBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free Class"
+                        android:textSize="16sp"
+                        android:textColor="#2C3E50"
+                        android:textStyle="bold"
+                        android:background="#FFD93D"
+                        android:paddingStart="28dp"
+                        android:paddingEnd="28dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:clickable="true"
+                        android:focusable="true"/>
 
                 </LinearLayout>
 
+                <!-- Illustration -->
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:layout_gravity="center_vertical" />
-
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Teacher and student illustration"/>
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-
 
     </LinearLayout>
 
