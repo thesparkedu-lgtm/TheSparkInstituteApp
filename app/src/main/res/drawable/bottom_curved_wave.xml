@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidDomInspection -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="240dp"
+    android:viewportWidth="400"
+    android:viewportHeight="220">
+
+    <!-- Main wave shape with smooth curve -->
+    <path
+        android:pathData="M 0,60 Q 100,20 200,60 Q 300,100 400,60 L 400,220 L 0,220 Z"
+        android:fillColor="#9D7728"/>
+
+    <!-- Darker shading for depth -->
+    <path
+        android:pathData="M 0,80 Q 100,40 200,80 Q 300,120 400,80 L 400,220 L 0,220 Z"
+        android:fillColor="#664106"
+        android:fillAlpha="0.3"/>
+</vector>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="300dp"
+    android:viewportWidth="300"
+    android:viewportHeight="300">
+
+    <!-- Circle 1 - Smallest -->
+    <path
+        android:pathData="M 250,50 A 50,50 0 0,1 250,150 A 50,50 0 0,1 250,50"
+        android:strokeColor="#E0A420"
+        android:strokeWidth="1.2"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- Circle 2 -->
+    <path
+        android:pathData="M 275,50 A 75,75 0 0,1 275,200 A 75,75 0 0,1 275,50"
+        android:strokeColor="#E0A420"
+        android:strokeWidth="1.2"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- Circle 3 -->
+    <path
+        android:pathData="M 300,50 A 100,100 0 0,1 300,250 A 100,100 0 0,1 300,50"
+        android:strokeColor="#E0A420"
+        android:strokeWidth="1.2"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- Circle 4 - Largest -->
+    <path
+        android:pathData="M 325,50 A 125,125 0 0,1 325,300 A 125,125 0 0,1 325,50"
+        android:strokeColor="#E0A420"
+        android:strokeWidth="1.2"
+        android:fillColor="@android:color/transparent"/>
+</vector>
