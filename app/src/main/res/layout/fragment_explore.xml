@@ -38,15 +38,14 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="14dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="14dp">
 
 
             <!-- First row -->
@@ -72,6 +71,7 @@
                         >
 
                         <LinearLayout
+                            android:id="@+id/ExploreNavodaya"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="#FFD14E"
@@ -83,8 +83,7 @@
                             <ImageView
                                 android:layout_width="42dp"
                                 android:layout_height="42dp"
-                                android:src="@drawable/navodaya"
-                                />
+                                android:src="@drawable/navodaya" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -122,6 +121,7 @@
                         >
 
                         <LinearLayout
+                            android:id="@+id/ExploreCompetative"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="#F2DDF8"
@@ -133,7 +133,7 @@
                             <ImageView
                                 android:layout_width="42dp"
                                 android:layout_height="42dp"
-                                android:src="@drawable/competitive"/>
+                                android:src="@drawable/competitive" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -180,6 +180,7 @@
                         >
 
                         <LinearLayout
+                            android:id="@+id/ExploreComputer"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="#B3EDFF"
@@ -191,7 +192,7 @@
                             <ImageView
                                 android:layout_width="42dp"
                                 android:layout_height="42dp"
-                                android:src="@drawable/computer"/>
+                                android:src="@drawable/computer" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -230,6 +231,7 @@
                         >
 
                         <LinearLayout
+                            android:id="@+id/ExploreCoaching"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="#B5FFBD"
@@ -241,7 +243,7 @@
                             <ImageView
                                 android:layout_width="42dp"
                                 android:layout_height="42dp"
-                                android:src="@drawable/coaching"/>
+                                android:src="@drawable/coaching" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -288,6 +290,7 @@
                         >
 
                         <LinearLayout
+                            android:id="@+id/ExploreNotes"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="#FFD4EE"
@@ -299,7 +302,7 @@
                             <ImageView
                                 android:layout_width="42dp"
                                 android:layout_height="47dp"
-                                android:src="@drawable/note"/>
+                                android:src="@drawable/note" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -337,6 +340,7 @@
                         >
 
                         <LinearLayout
+                            android:id="@+id/ExploreFreeMasterClass"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="#D9DCFF"
@@ -345,11 +349,10 @@
                             android:paddingTop="10dp">
 
 
-
                             <ImageView
                                 android:layout_width="44dp"
                                 android:layout_height="44dp"
-                                android:src="@drawable/free_class"/>
+                                android:src="@drawable/free_class" />
 
                             <TextView
                                 android:layout_width="wrap_content"

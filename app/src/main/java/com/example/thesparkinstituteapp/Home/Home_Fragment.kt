@@ -40,19 +40,19 @@ class HomeFragment : Fragment() {
 
         competativaBtn.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad", "Coaching")
+            intent.putExtra("fragmentToLoad", "Competative")
             startActivity(intent)
         }
 
         computerBtn.setOnClickListener {
          val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad", "Competative")
+            intent.putExtra("fragmentToLoad", "Computer")
             startActivity(intent)
         }
 
         coachingBtn.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad", "Computer")
+            intent.putExtra("fragmentToLoad", "Coaching")
             startActivity(intent)
         }
 

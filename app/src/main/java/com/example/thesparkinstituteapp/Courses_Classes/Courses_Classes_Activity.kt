@@ -27,13 +27,14 @@ class Courses_Classes_Activity : AppCompatActivity() {
 
         val fragmentTag = intent.getStringExtra("fragmentToLoad")
 
-        val fragment = when(fragmentTag){
+        val fragment = when (fragmentTag) {
             "Navodaya" -> Navodaya_Fragment()
             "Coaching" -> Coaching_Fragment()
             "Computer" -> Computer_Fragment()
             "Competative" -> Competative_Fragment()
             else -> Navodaya_Fragment()
         }
+
         supportFragmentManager.beginTransaction()
             .setCustomAnimations(
                 R.anim.fade_slide_out_right,
@@ -41,7 +42,7 @@ class Courses_Classes_Activity : AppCompatActivity() {
                 R.anim.fade_slide_out_left,
                 R.anim.fade_slide_in_left
             )
-            .replace(R.id.fragment_container_2,fragment)
+            .replace(R.id.fragment_container_2, fragment)
             .commit()
     }
 }
