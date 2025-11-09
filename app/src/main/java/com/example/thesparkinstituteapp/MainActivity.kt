@@ -30,15 +30,14 @@ class MainActivity : AppCompatActivity() {
         val isLoggedIn = sharedPrefHelper.isLoggedIn()
         val user = FirebaseAuth.getInstance().currentUser
 
-        // ✅ If not logged in → go to LoginActivity
         if (!isLoggedIn || user == null) {
             startActivity(Intent(this, Login_Register_Activity::class.java))
             finish()
             return
         }
-
-        // ✅ Otherwise, stay in MainActivity
-        loadFragment(HomeFragment()) // default fragment
+        if (savedInstanceState == null) {
+            loadFragment(HomeFragment())
+        }
 
         bottomNav.setOnItemSelectedListener(NavigationBarView.OnItemSelectedListener { item: MenuItem ->
             val selectedFragment: Fragment = when (item.itemId) {

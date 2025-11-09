@@ -25,25 +25,10 @@ class HomeFragment : Fragment() {
     ): View {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        val profileIcon = view.findViewById<ImageView>(R.id.profile)
         val navodayaBtn = view.findViewById<LinearLayout>(R.id.NavodayaBtn)
         val competativaBtn = view.findViewById<LinearLayout>(R.id.CompetitiveBtn)
         val computerBtn = view.findViewById<LinearLayout>(R.id.ComputerBtn)
         val coachingBtn = view.findViewById<LinearLayout>(R.id.CoachingBtn)
-
-        profileIcon.setOnClickListener {
-            val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.setCustomAnimations(
-                R.anim.fade_slide_in_left,
-                R.anim.fade_slide_out_left,
-                R.anim.fade_slide_in_right,
-                R.anim.fade_slide_out_right
-
-            )
-            transaction.replace(R.id.fragment_container, ProfileFragment())
-            transaction.addToBackStack(null)
-            transaction.commit()
-        }
 
         navodayaBtn.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
