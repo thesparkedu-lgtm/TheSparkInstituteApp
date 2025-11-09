@@ -12,6 +12,9 @@ import androidx.fragment.app.Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Coaching.Coaching_Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Competative.Competative_Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Computer.Computer_Fragment
+import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreFreeMasterClass
+import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreNotes
+import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.Notes
 import com.example.thesparkinstituteapp.Courses_Classes.Novodaya.Navodaya_Fragment
 import com.example.thesparkinstituteapp.Home.HomeFragment
 import com.example.thesparkinstituteapp.MainActivity
@@ -32,6 +35,13 @@ class Courses_Classes_Activity : AppCompatActivity() {
             "Coaching" -> Coaching_Fragment()
             "Computer" -> Computer_Fragment()
             "Competative" -> Competative_Fragment()
+            "ExploreNavodaya" -> Navodaya_Fragment()
+            "ExploreCoaching" -> Coaching_Fragment()
+            "ExploreComputer" -> Computer_Fragment()
+            "ExploreCompetative" -> Competative_Fragment()
+            "ExploreNotes" -> ExploreNotes()
+            "ExploreFreeMasterClass" -> ExploreFreeMasterClass()
+            "notesBtn" -> Notes()
             else -> Navodaya_Fragment()
         }
 

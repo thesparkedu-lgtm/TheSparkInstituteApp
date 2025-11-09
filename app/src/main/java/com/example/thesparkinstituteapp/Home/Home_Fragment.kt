@@ -29,6 +29,7 @@ class HomeFragment : Fragment() {
         val competativaBtn = view.findViewById<LinearLayout>(R.id.CompetitiveBtn)
         val computerBtn = view.findViewById<LinearLayout>(R.id.ComputerBtn)
         val coachingBtn = view.findViewById<LinearLayout>(R.id.CoachingBtn)
+        val notesBtn = view.findViewById<LinearLayout>(R.id.NotesBtn)
 
         navodayaBtn.setOnClickListener {
 
@@ -55,6 +56,13 @@ class HomeFragment : Fragment() {
             intent.putExtra("fragmentToLoad", "Coaching")
             startActivity(intent)
         }
+
+        notesBtn.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","notesBtn")
+            startActivity(intent)
+        }
+
 
         return view
     }
