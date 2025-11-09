@@ -126,7 +126,7 @@
                 android:layout_marginBottom="20dp">
 
                 <LinearLayout
-                    android:id="@+id/whatsappButton"
+                    android:id="@+id/whatsappButtonClass11Navodaya"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
