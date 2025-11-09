@@ -1,13 +1,14 @@
-package com.example.thesparkinstituteapp.Navodaya
+package com.example.thesparkinstituteapp.Courses_Classes.Novodaya
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.TextUtils.replace
 import android.view.LayoutInflater
+import android.view.SurfaceControl
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 import com.example.thesparkinstituteapp.R
-
 
 class Navodaya_Fragment : Fragment() {
 
@@ -22,16 +23,10 @@ class Navodaya_Fragment : Fragment() {
         val class9 = view.findViewById<LinearLayout>(R.id.Class9)
         val class11 = view.findViewById<LinearLayout>(R.id.Class11)
 
+
         class6.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.setCustomAnimations(
-                R.anim.fade_slide_in_left,
-                R.anim.fade_slide_out_left,
-                R.anim.fade_slide_in_right,
-                R.anim.fade_slide_out_right
-
-            )
-            transaction.replace(R.id.fragment_container,Class_6())
+            transaction.replace(R.id.fragment_container_2, Class_6())
             transaction.addToBackStack(null)
             transaction.commit()
         }
@@ -45,7 +40,7 @@ class Navodaya_Fragment : Fragment() {
                 R.anim.fade_slide_out_right
 
             )
-            transaction.replace(R.id.fragment_container,Class_9())
+            transaction.replace(R.id.fragment_container_2, Class_9())
             transaction.addToBackStack(null)
             transaction.commit()
         }
@@ -59,7 +54,7 @@ class Navodaya_Fragment : Fragment() {
                 R.anim.fade_slide_out_right
 
             )
-            transaction.replace(R.id.fragment_container, Class_11())
+            transaction.replace(R.id.fragment_container_2, Class_11())
             transaction.addToBackStack(null)
             transaction.commit()
         }

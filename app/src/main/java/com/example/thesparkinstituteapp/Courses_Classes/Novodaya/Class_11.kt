@@ -1,33 +1,33 @@
-package com.example.thesparkinstituteapp.Navodaya
+package com.example.thesparkinstituteapp.Courses_Classes.Novodaya
 
-import android.R.attr.phoneNumber
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.thesparkinstituteapp.R
-import com.google.android.play.integrity.internal.u
 
-class Class_9 : Fragment() {
+class Class_11 : Fragment() {
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_class_9, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_class_11, container, false)
 
-        val whatsappButton = view.findViewById<LinearLayout>(R.id.whatsappButtonClass9Navodaya)
-        whatsappButton.setOnClickListener {
+        val whatsappButtonClass11Navodaya =
+            view.findViewById<LinearLayout>(R.id.whatsappButtonClass11Navodaya)
+        whatsappButtonClass11Navodaya.setOnClickListener {
             openWhatsApp()
         }
 
 
-    return view
+        return view
     }
 
     private fun openWhatsApp() {
@@ -43,5 +43,7 @@ class Class_9 : Fragment() {
             Toast.makeText(requireContext(), "WhatsApp not installed!", Toast.LENGTH_SHORT).show()
         }
     }
+
+
 
 }

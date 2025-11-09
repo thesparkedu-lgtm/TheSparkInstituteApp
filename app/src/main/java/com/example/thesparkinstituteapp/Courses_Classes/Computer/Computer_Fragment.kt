@@ -1,4 +1,4 @@
-package com.example.thesparkinstituteapp.Computer
+package com.example.thesparkinstituteapp.Courses_Classes.Computer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

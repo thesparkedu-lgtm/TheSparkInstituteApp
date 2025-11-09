@@ -1,19 +1,19 @@
 package com.example.thesparkinstituteapp.Home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
-import com.example.thesparkinstituteapp.Coaching.Coaching_Fragment
-import com.example.thesparkinstituteapp.Competative.Competative_Fragment
-import com.example.thesparkinstituteapp.Computer.Computer_Fragment
-import com.example.thesparkinstituteapp.Navodaya.Navodaya_Fragment
-import com.example.thesparkinstituteapp.Profile.ProfileFragment
+import com.example.thesparkinstituteapp.Courses_Classes.Coaching.Coaching_Fragment
+import com.example.thesparkinstituteapp.Courses_Classes.Competative.Competative_Fragment
+import com.example.thesparkinstituteapp.Courses_Classes.Computer.Computer_Fragment
+import com.example.thesparkinstituteapp.Courses_Classes.Courses_Classes_Activity
 import com.example.thesparkinstituteapp.R
 import com.example.thesparkinstituteapp.sharedPre.SharedPrefHelper
+import kotlin.jvm.java
 
 class HomeFragment : Fragment() {
 
@@ -31,59 +31,29 @@ class HomeFragment : Fragment() {
         val coachingBtn = view.findViewById<LinearLayout>(R.id.CoachingBtn)
 
         navodayaBtn.setOnClickListener {
-            val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.setCustomAnimations(
-                R.anim.fade_slide_in_left,
-                R.anim.fade_slide_out_left,
-                R.anim.fade_slide_in_right,
-                R.anim.fade_slide_out_right
 
-            )
-            transaction.replace(R.id.fragment_container, Navodaya_Fragment())
-            transaction.addToBackStack(null)
-            transaction.commit()
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad", "Navodaya")
+            startActivity(intent)
+
         }
 
         competativaBtn.setOnClickListener {
-            val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.setCustomAnimations(
-                R.anim.fade_slide_in_left,
-                R.anim.fade_slide_out_left,
-                R.anim.fade_slide_in_right,
-                R.anim.fade_slide_out_right
-
-            )
-            transaction.replace(R.id.fragment_container, Competative_Fragment())
-            transaction.addToBackStack(null)
-            transaction.commit()
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad", "Coaching")
+            startActivity(intent)
         }
 
         computerBtn.setOnClickListener {
-            val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.setCustomAnimations(
-                R.anim.fade_slide_in_left,
-                R.anim.fade_slide_out_left,
-                R.anim.fade_slide_in_right,
-                R.anim.fade_slide_out_right
-
-            )
-            transaction.replace(R.id.fragment_container, Computer_Fragment())
-            transaction.addToBackStack(null)
-            transaction.commit()
+         val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad", "Competative")
+            startActivity(intent)
         }
 
         coachingBtn.setOnClickListener {
-            val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.setCustomAnimations(
-                R.anim.fade_slide_in_left,
-                R.anim.fade_slide_out_left,
-                R.anim.fade_slide_in_right,
-                R.anim.fade_slide_out_right
-
-            )
-            transaction.replace(R.id.fragment_container, Coaching_Fragment())
-            transaction.addToBackStack(null)
-            transaction.commit()
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad", "Computer")
+            startActivity(intent)
         }
 
         return view

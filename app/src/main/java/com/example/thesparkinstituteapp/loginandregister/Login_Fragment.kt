@@ -49,7 +49,6 @@ class LoginFragment : Fragment() {
                         sharedPrefHelper.saveLoginState(true)
                         Toast.makeText(requireContext(), "Login successful", Toast.LENGTH_SHORT).show()
 
-                        // Move to MainActivity after login
                         startActivity(Intent(requireContext(), MainActivity::class.java))
                         requireActivity().finish()
                     } else {
