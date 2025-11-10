@@ -72,6 +72,7 @@
                 android:layout_height="120dp"
                 android:layout_marginTop="12dp"
                 android:flipInterval="3000"
+                android:autoStart="true"
                 android:inAnimation="@anim/fade_slide_in_right"
                 android:layout_margin="14dp"
                 android:outAnimation="@anim/fade_slide_out_left">
