@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    >
+    android:background="#E2F2E2">
 
     <!-- Header Section with Purple Gradient -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:orientation="horizontal"
+        android:background="@drawable/liner_coaching"
         >
 
         <LinearLayout
@@ -24,7 +25,7 @@
                 android:layout_height="30dp"
                 android:layout_marginBottom="16dp"
                 android:contentDescription="Back button"
-                />
+                android:src="@drawable/back_btn" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -46,11 +47,12 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginStart="60dp"
-                >
+                android:src="@drawable/competitive">
 
             </ImageView>
         </LinearLayout>
 
+        <!-- Back Arrow -->
 
 
 
@@ -58,7 +60,30 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@drawable/top_corner_radus"
+        >
+
+        <!-- Chapters Section -->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="course"
+            android:layout_gravity="center"
+            android:src="@drawable/course" />
+        <!-- Courses Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuitions"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            />
 
     </LinearLayout>
     <!-- Content Section -->
@@ -71,20 +96,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="@color/white"
             android:padding="16dp">
 
             <!-- Chapters Section -->
 
-            <!-- Courses Label -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Courses"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
+                android:text="WB Bord Tuitions"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"
                 android:textStyle="bold"
-                android:textColor="#333333"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="18dp"
+                android:textColor="#333333"/>
+
 
             <!-- Course Cards -->
             <LinearLayout
@@ -100,13 +127,14 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E8D5FF">
+                    app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_coaching"
 
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
@@ -114,7 +142,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Agniveer"
+                            android:text="Class 12"
                             android:textSize="16sp"
                             android:textColor="#333333" />
 
@@ -129,7 +157,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E8D5FF">
+                    app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -137,18 +165,29 @@
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:paddingStart="24dp"
+                        android:background="@drawable/outline_coaching"
                         android:paddingEnd="24dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="SSC GD"
+                            android:text="Science Class 11 &amp; 12"
                             android:textSize="16sp"
                             android:textColor="#333333" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ICSC Bord class 5 to 12 Tuitions"
+                    android:textSize="20sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="18dp"
+                    android:textColor="#333333"/>
 
                 <!-- WB Police Card -->
                 <androidx.cardview.widget.CardView
@@ -157,7 +196,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E8D5FF">
+                    app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -165,12 +204,13 @@
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:paddingStart="24dp"
+                        android:background="@drawable/outline_coaching"
                         android:paddingEnd="24dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="WB Police"
+                            android:text="Science"
                             android:textSize="16sp"
                             android:textColor="#333333" />
 
@@ -185,20 +225,21 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E8D5FF">
+                    app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_coaching"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Railway"
+                            android:text="Math"
                             android:textSize="16sp"
                             android:textColor="#333333" />
 
@@ -213,13 +254,14 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E8D5FF">
+                    app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_coaching"
 
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
@@ -227,7 +269,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Indian Army"
+                            android:text="English Focus"
                             android:textSize="16sp"
                             android:textColor="#333333" />
 
