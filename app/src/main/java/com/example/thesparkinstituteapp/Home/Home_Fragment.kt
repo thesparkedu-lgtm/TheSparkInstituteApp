@@ -29,6 +29,7 @@ class HomeFragment : Fragment() {
         val competativaBtn = view.findViewById<LinearLayout>(R.id.CompetitiveBtn)
         val computerBtn = view.findViewById<LinearLayout>(R.id.ComputerBtn)
         val coachingBtn = view.findViewById<LinearLayout>(R.id.CoachingBtn)
+        val notesBtn = view.findViewById<LinearLayout>(R.id.NotesBtn)
 
         navodayaBtn.setOnClickListener {
 
@@ -40,21 +41,28 @@ class HomeFragment : Fragment() {
 
         competativaBtn.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad", "Coaching")
+            intent.putExtra("fragmentToLoad", "Competative")
             startActivity(intent)
         }
 
         computerBtn.setOnClickListener {
          val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad", "Competative")
+            intent.putExtra("fragmentToLoad", "Computer")
             startActivity(intent)
         }
 
         coachingBtn.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad", "Computer")
+            intent.putExtra("fragmentToLoad", "Coaching")
             startActivity(intent)
         }
+
+        notesBtn.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","notesBtn")
+            startActivity(intent)
+        }
+
 
         return view
     }
