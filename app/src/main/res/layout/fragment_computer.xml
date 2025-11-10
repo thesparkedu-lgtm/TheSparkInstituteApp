@@ -176,6 +176,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/ADCA_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -206,6 +207,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/DCA_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -235,6 +237,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Java_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -264,6 +267,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Python_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -293,6 +297,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Kotlin_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -321,6 +326,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Video_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -348,6 +354,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Android_Development_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -359,7 +366,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="App Devlopment"
+                            android:text="Android Devlopment"
                             android:textSize="16sp"
                             android:textColor="#333333" />
 
@@ -375,6 +382,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Web_Development_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -403,6 +411,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Graphics_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
