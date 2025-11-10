@@ -39,6 +39,7 @@ class Explore_Fragment : Fragment() {
             startActivity(intent)
         }
 
+
         ExploreCompetative.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
             intent.putExtra("fragmentToLoad","ExploreCompetative")
