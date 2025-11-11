@@ -60,5 +60,5 @@ dependencies {
     implementation("com.hbb20:ccp:2.7.3")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.karumi:dexter:6.2.3")
-
+    implementation("com.google.android.material:material:1.9.0")
 }
