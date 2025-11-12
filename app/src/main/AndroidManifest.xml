@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheSparkInstituteApp"
         tools:targetApi="31">
+
+        <activity
+            android:name=".Notes.PdfViewerActivity"
+            android:exported="false" />
         <activity
             android:name=".Courses_Classes.Courses_Classes_Activity"
             android:exported="false" />

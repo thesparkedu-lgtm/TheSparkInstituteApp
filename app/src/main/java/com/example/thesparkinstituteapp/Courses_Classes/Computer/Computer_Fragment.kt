@@ -1,60 +1,89 @@
 package com.example.thesparkinstituteapp.Courses_Classes.Computer
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import com.example.thesparkinstituteapp.Courses_Classes.Courses_Classes_Activity
 import com.example.thesparkinstituteapp.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Computer_Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Computer_Fragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_computer, container, false)
+        val view = inflater.inflate(R.layout.fragment_computer, container, false)
+
+        val ADCA = view.findViewById<LinearLayout>(R.id.ADCA_From_Computer_Fragment)
+        val DCA = view.findViewById<LinearLayout>(R.id.DCA_From_Computer_Fragment)
+        val Java = view.findViewById<LinearLayout>(R.id.Java_From_Computer_Fragment)
+        val Kotlin = view.findViewById<LinearLayout>(R.id.Kotlin_From_Computer_Fragment)
+        val Android_Development = view.findViewById<LinearLayout>(R.id.Android_Development_From_Computer_Fragment)
+        val VideoEditing = view.findViewById<LinearLayout>(R.id.Video_From_Computer_Fragment)
+        val webDesign = view.findViewById<LinearLayout>(R.id.Web_Development_From_Computer_Fragment)
+        val Graphic = view.findViewById<LinearLayout>(R.id.Graphics_From_Computer_Fragment)
+
+
+        ADCA.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","ADCA")
+            startActivity(intent)
+        }
+
+        DCA.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","DCA")
+            startActivity(intent)
+        }
+
+        Java.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","Java")
+            startActivity(intent)
+        }
+
+        Kotlin.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","Kotlin")
+            startActivity(intent)
+        }
+
+        Android_Development.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","Android_Development")
+            startActivity(intent)
+        }
+
+        VideoEditing.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","VideoEditing")
+            startActivity(intent)
+        }
+
+       Graphic.setOnClickListener {
+           val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+           intent.putExtra("fragmentToLoad","Graphic")
+           startActivity(intent)
+       }
+
+        webDesign.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","webDesign")
+
+
+        }
+
+
+
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Computer_Fragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Computer_Fragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+
 }
