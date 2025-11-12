@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.thesparkinstituteapp.Note
 import com.example.thesparkinstituteapp.NotesAdapter
+import com.example.thesparkinstituteapp.Pdf_reader
 import com.example.thesparkinstituteapp.R
 import com.google.firebase.database.*
 import kotlin.jvm.java
@@ -36,9 +37,11 @@ class notes_Fragment : Fragment() {
         val progressBar: ProgressBar = view.findViewById(R.id.progressBar)
 
         adapter = NotesAdapter(notes) { note ->
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(note.url))
+            val intent = Intent(requireContext(), Pdf_reader::class.java)
+            intent.putExtra("pdf_url", note.url)  // pass PDF URL to reader
             startActivity(intent)
         }
+
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
@@ -57,40 +60,27 @@ class notes_Fragment : Fragment() {
 
     private fun loadNotes(progressBar: ProgressBar, swipeRefresh: SwipeRefreshLayout) {
         progressBar.visibility = View.VISIBLE
-        Log.d("FirebaseDebug", "loadNotes() called")
 
         database.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                Log.d("FirebaseDebug", "onDataChange triggered")
-                notes.clear()  // Clear the list to avoid duplicates
+                notes.clear()  // clear old data
 
                 for (child in snapshot.children) {
-                    val title = child.child("title").getValue(String::class.java)
+                    val title = child.child("title").getValue(String::class.java) ?: continue
                     val category =
-                        child.child("description").getValue(String::class.java)  // map description
-                    val url =
-                        child.child("pdfUrl").getValue(String::class.java)           // map pdfUrl
+                        child.child("description").getValue(String::class.java) ?: continue
+                    val url = child.child("pdfUrl").getValue(String::class.java) ?: continue
 
-                    if (title != null && category != null && url != null) {
-                        // Prevent duplicate notes by URL
-                        if (!notes.any { it.url == url }) {
-                            notes.add(Note(title, category, url))
-                        }
-                    }
+                    // Trim whitespaces to avoid false duplicates
+                    notes.add(Note(title.trim(), category.trim(), url.trim()))
                 }
 
-                adapter.notifyDataSetChanged()  // Refresh RecyclerView
+                adapter.notifyDataSetChanged()
                 progressBar.visibility = View.GONE
                 swipeRefresh.isRefreshing = false
 
                 if (notes.isEmpty()) {
                     Toast.makeText(requireContext(), "No notes found", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(
-                        requireContext(),
-                        "Loaded ${notes.size} notes",
-                        Toast.LENGTH_SHORT
-                    ).show()
                 }
             }
 
