@@ -16,6 +16,10 @@
         <item name="background">@color/backnigntcolor</item>
     </style>
 
+    <style name="background_page_secondary">
+        <item name="background">@color/backgroung_black</item>
+    </style>
+
 
     <!-- Text Color -->
         <color name="text_color">#FFFFFFFF</color>
