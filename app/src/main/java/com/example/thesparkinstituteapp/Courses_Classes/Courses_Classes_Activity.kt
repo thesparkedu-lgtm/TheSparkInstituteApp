@@ -1,14 +1,8 @@
 package com.example.thesparkinstituteapp.Courses_Classes
 
-import android.R.attr.fragment
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Coaching.Coaching_Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Competative.Competative_Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Computer.ADCA_Fragment
@@ -22,13 +16,10 @@ import com.example.thesparkinstituteapp.Courses_Classes.Computer.Video_Editing_F
 import com.example.thesparkinstituteapp.Courses_Classes.Computer.Web_design
 import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreFreeMasterClass
 import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreNotes
-import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.Notes
 import com.example.thesparkinstituteapp.Courses_Classes.Novodaya.Navodaya_Fragment
-import com.example.thesparkinstituteapp.Home.HomeFragment
-import com.example.thesparkinstituteapp.MainActivity
+import com.example.thesparkinstituteapp.Notes.notes_Fragment
 import com.example.thesparkinstituteapp.R
-import com.example.thesparkinstituteapp.loginandregister.Login_Register_Activity
-import kotlin.jvm.java
+
 
 class Courses_Classes_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,7 +40,7 @@ class Courses_Classes_Activity : AppCompatActivity() {
             "ExploreCompetative" -> Competative_Fragment()
             "ExploreNotes" -> ExploreNotes()
             "ExploreFreeMasterClass" -> ExploreFreeMasterClass()
-            "notesBtn" -> Notes()
+            "notesBtn" -> notes_Fragment()
             "ADCA" -> ADCA_Fragment()
             "DCA" -> DCA_Fragment()
             "Java" -> Java_Fragment()
