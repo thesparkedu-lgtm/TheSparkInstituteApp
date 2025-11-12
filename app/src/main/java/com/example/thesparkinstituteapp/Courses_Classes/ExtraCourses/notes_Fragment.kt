@@ -57,33 +57,29 @@ class notes_Fragment : Fragment() {
 
     private fun loadNotes(progressBar: ProgressBar, swipeRefresh: SwipeRefreshLayout) {
         progressBar.visibility = View.VISIBLE
-        Log.d("FirebaseDebug", "Loading notes started")
+        Log.d("FirebaseDebug", "loadNotes() called")
 
         database.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 Log.d("FirebaseDebug", "onDataChange triggered")
-                Log.d("FirebaseDebug", "Snapshot exists: ${snapshot.exists()}")
-                Log.d("FirebaseDebug", "Children count: ${snapshot.childrenCount}")
-
-                notes.clear()
+                notes.clear()  // Clear the list to avoid duplicates
 
                 for (child in snapshot.children) {
-                    Log.d("FirebaseDebug", "Reading child: ${child.key}")
-
                     val title = child.child("title").getValue(String::class.java)
-                    val category = child.child("category").getValue(String::class.java)
-                    val url = child.child("url").getValue(String::class.java)
-
-                    Log.d("FirebaseDebug", "Got -> title: $title, category: $category, url: $url")
+                    val category =
+                        child.child("description").getValue(String::class.java)  // map description
+                    val url =
+                        child.child("pdfUrl").getValue(String::class.java)           // map pdfUrl
 
                     if (title != null && category != null && url != null) {
-                        notes.add(Note(title, category, url))
+                        // Prevent duplicate notes by URL
+                        if (!notes.any { it.url == url }) {
+                            notes.add(Note(title, category, url))
+                        }
                     }
                 }
 
-                Log.d("FirebaseDebug", "Total notes added: ${notes.size}")
-
-                adapter.notifyDataSetChanged()
+                adapter.notifyDataSetChanged()  // Refresh RecyclerView
                 progressBar.visibility = View.GONE
                 swipeRefresh.isRefreshing = false
 
@@ -101,7 +97,6 @@ class notes_Fragment : Fragment() {
             override fun onCancelled(error: DatabaseError) {
                 progressBar.visibility = View.GONE
                 swipeRefresh.isRefreshing = false
-                Log.e("FirebaseDebug", "Error: ${error.message}")
                 Toast.makeText(requireContext(), "Error: ${error.message}", Toast.LENGTH_LONG)
                     .show()
             }
