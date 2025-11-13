@@ -38,7 +38,7 @@ class Courses_Classes_Activity : AppCompatActivity() {
             "ExploreCoaching" -> Coaching_Fragment()
             "ExploreComputer" -> Computer_Fragment()
             "ExploreCompetative" -> Competative_Fragment()
-            "ExploreNotes" -> ExploreNotes()
+            "ExploreNotes" -> notes_Fragment()
             "ExploreFreeMasterClass" -> ExploreFreeMasterClass()
             "notesBtn" -> notes_Fragment()
             "ADCA" -> ADCA_Fragment()

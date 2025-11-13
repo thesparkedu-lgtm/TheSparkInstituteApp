@@ -5,18 +5,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.thesparkinstituteapp.R
 
 class NotesAdapter(
     private val notes: List<Note>,
     private val onClick: (Note) -> Unit
 ) : RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
 
-
-    class NoteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val title: TextView = view.findViewById(R.id.noteTitle)
+    inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val title: TextView = itemView.findViewById(R.id.noteTitle)
+        val description: TextView = itemView.findViewById(R.id.noteDescription)
+        val viewText: TextView = itemView.findViewById(R.id.viewText)
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -27,10 +26,9 @@ class NotesAdapter(
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = notes[position]
         holder.title.text = note.title
+        holder.description.text = note.description
         holder.itemView.setOnClickListener { onClick(note) }
     }
 
     override fun getItemCount(): Int = notes.size
-
-
 }

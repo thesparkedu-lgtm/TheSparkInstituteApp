@@ -1,12 +1,10 @@
 package com.example.thesparkinstituteapp.Notes
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.Button
+import android.widget.PopupMenu
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -18,13 +16,15 @@ import com.example.thesparkinstituteapp.NotesAdapter
 import com.example.thesparkinstituteapp.Pdf_reader
 import com.example.thesparkinstituteapp.R
 import com.google.firebase.database.*
-import kotlin.jvm.java
 
 class notes_Fragment : Fragment() {
 
     private lateinit var database: DatabaseReference
-    private val notes = mutableListOf<Note>()
+    private val allNotes = mutableListOf<Note>()
+    private val filteredNotes = mutableListOf<Note>()
     private lateinit var adapter: NotesAdapter
+    private lateinit var progressBar: ProgressBar
+    private lateinit var swipeRefreshLayout: SwipeRefreshLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,63 +33,106 @@ class notes_Fragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_notes, container, false)
 
         val recyclerView: RecyclerView = view.findViewById(R.id.notesRecyclerView)
-        val swipeRefresh: SwipeRefreshLayout = view.findViewById(R.id.swipeRefresh)
-        val progressBar: ProgressBar = view.findViewById(R.id.progressBar)
+        val categoryButton: Button = view.findViewById(R.id.categoryButton)
+        progressBar = view.findViewById(R.id.progressBar)
+        swipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout)
 
-        adapter = NotesAdapter(notes) { note ->
+        adapter = NotesAdapter(filteredNotes) { note ->
             val intent = Intent(requireContext(), Pdf_reader::class.java)
-            intent.putExtra("pdf_url", note.url)  // pass PDF URL to reader
+            intent.putExtra("pdf_url", note.url)
             startActivity(intent)
         }
-
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
 
         database = FirebaseDatabase.getInstance().getReference("notes")
+        loadAllNotes()
 
-        progressBar.visibility = View.VISIBLE
-        loadNotes(progressBar, swipeRefresh)
+        // 🔄 Slide to refresh
+        swipeRefreshLayout.setOnRefreshListener {
+            loadAllNotes()
+        }
 
-        swipeRefresh.setOnRefreshListener {
-            loadNotes(progressBar, swipeRefresh)
+        categoryButton.setOnClickListener {
+            showCategoryMenu(it as Button)
         }
 
         return view
     }
 
-    private fun loadNotes(progressBar: ProgressBar, swipeRefresh: SwipeRefreshLayout) {
+    private fun showCategoryMenu(button: Button) {
+        val popup = PopupMenu(requireContext(), button)
+        popup.menuInflater.inflate(R.menu.category_menu, popup.menu)
+
+        popup.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.navodaya -> filterNotesBy("Navodaya")
+                R.id.computer -> filterNotesBy("Computer")
+                R.id.coaching -> filterNotesBy("Coaching")
+                R.id.all -> showAllNotes()
+            }
+            true
+        }
+        popup.show()
+    }
+
+    private fun loadAllNotes() {
         progressBar.visibility = View.VISIBLE
 
         database.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                notes.clear()  // clear old data
+                allNotes.clear()
+                filteredNotes.clear()
 
                 for (child in snapshot.children) {
                     val title = child.child("title").getValue(String::class.java) ?: continue
-                    val category =
-                        child.child("description").getValue(String::class.java) ?: continue
+                    val description = child.child("description").getValue(String::class.java) ?: ""
                     val url = child.child("pdfUrl").getValue(String::class.java) ?: continue
 
-                    // Trim whitespaces to avoid false duplicates
-                    notes.add(Note(title.trim(), category.trim(), url.trim()))
+                    // Add normally
+                    allNotes.add(Note(title, description, url))
                 }
 
-                adapter.notifyDataSetChanged()
-                progressBar.visibility = View.GONE
-                swipeRefresh.isRefreshing = false
+                // 🔝 Sort by latest first (newest at top)
+                allNotes.reverse()
 
-                if (notes.isEmpty()) {
+                filteredNotes.addAll(allNotes)
+                adapter.notifyDataSetChanged()
+
+                progressBar.visibility = View.GONE
+                swipeRefreshLayout.isRefreshing = false
+
+                if (allNotes.isEmpty()) {
                     Toast.makeText(requireContext(), "No notes found", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
                 progressBar.visibility = View.GONE
-                swipeRefresh.isRefreshing = false
-                Toast.makeText(requireContext(), "Error: ${error.message}", Toast.LENGTH_LONG)
-                    .show()
+                swipeRefreshLayout.isRefreshing = false
+                Toast.makeText(requireContext(), "Error: ${error.message}", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    private fun filterNotesBy(category: String) {
+        val filtered = allNotes.filter {
+            it.description?.contains(category, ignoreCase = true) == true
+        }
+
+        filteredNotes.clear()
+        filteredNotes.addAll(filtered)
+        adapter.notifyDataSetChanged()
+
+        if (filteredNotes.isEmpty()) {
+            Toast.makeText(requireContext(), "No notes found for $category", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun showAllNotes() {
+        filteredNotes.clear()
+        filteredNotes.addAll(allNotes)
+        adapter.notifyDataSetChanged()
     }
 }
