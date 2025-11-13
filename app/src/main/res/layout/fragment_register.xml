@@ -1,113 +1,268 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF9E5"
-    android:gravity="center_horizontal">
+  >
 
-    <ImageView
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="0dp"
-        android:src="@drawable/spark_logo"
-        android:layout_gravity="center"
-        android:contentDescription="@string/sign_up_spark_institute_logo"
-        android:layout_marginBottom="8dp"/>
-
-    <!-- Sign up Title -->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Signup_sign_up"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"/>
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
 
-    <!-- Full Name -->
-    <EditText
-        android:layout_width="match_parent"
-        android:id="@+id/fullName"
-        android:layout_height="48dp"
-        android:hint="@string/full_name"
-        android:paddingLeft="16dp"
-        android:layout_marginHorizontal="24dp"
-        android:textColorHint="#AAA763"
-        android:textSize="16sp"
-        android:layout_marginBottom="12dp"/>
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/spark_logo"
+            android:contentDescription="Spark Institute Logo"
+             />
 
-    <!-- Email Address -->
-    <EditText
-        android:layout_width="match_parent"
-        android:id="@+id/email"
-        android:layout_height="48dp"
-        android:hint="@string/email_address"
-        android:paddingLeft="16dp"
-        android:layout_marginHorizontal="24dp"
-        android:textColorHint="#AAA763"
-        android:textSize="16sp"
-        android:layout_marginBottom="12dp"/>
+        <!-- Title -->
 
-    <!-- Create Password -->
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:id="@+id/createPassword"
-        android:hint="@string/create_password"
-        android:paddingLeft="16dp"
-        android:layout_marginHorizontal="24dp"
-        android:textColorHint="#AAA763"
-        android:textSize="16sp"
-        android:inputType="textPassword"
-        android:layout_marginBottom="12dp"/>
+        <!-- Create Account Header -->
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="42sp"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_marginTop="22dp" />
 
-    <!-- Confirm Password -->
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:id="@+id/confirmPassword"
-        android:hint="@string/confirm_password"
-        android:paddingLeft="16dp"
-        android:layout_marginHorizontal="24dp"
-        android:textColorHint="#AAA763"
-        android:textSize="16sp"
-        android:inputType="textPassword"
-        android:layout_marginBottom="20dp"/>
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's get you started on your learning journey."
+            android:textSize="12sp"
+            android:textColor="@color/text_Secondary"
+            android:layout_marginTop="4dp" />
 
-    <!-- Sign up Button -->
-    <Button
-        android:layout_width="match_parent"
-        android:id="@+id/sign_upBtn"
-        android:layout_height="48dp"
-        android:text="Sign up"
-        android:backgroundTint="#FFD20A"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:layout_marginHorizontal="48dp"
-        android:layout_marginBottom="12dp"/>
+        <!-- Full Name Label -->
+        <TextView
+            android:id="@+id/tvFullNameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textSize="16sp"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="32dp" />
 
-    <!-- Log In Link -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do you have account ? "
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:gravity="center"
-        android:layout_gravity="center"/>
+        <!-- Full Name Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintEnabled="false"
+            android:background="@drawable/all_corner_radus"
+            android:elevation="2dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/Login"
-        android:layout_height="wrap_content"
-        android:text="Log in"
-        android:textColor="#FFD43B"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_gravity="center"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Full Name"
+                android:shadowColor="@color/black"
+                android:textColorHint="#999999"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:inputType="textPersonName"
+                android:background="@drawable/all_corner_radus"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-</LinearLayout>
+        <!-- Email Address Label -->
+        <TextView
+            android:id="@+id/tvEmailLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textSize="16sp"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+
+            />
+
+        <!-- Email Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="#CCCCCC"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:hintEnabled="false"
+
+            android:background="@drawable/all_corner_radus"
+            android:elevation="2dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your email"
+                android:shadowColor="@color/black"
+
+                android:textColorHint="#999999"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/all_corner_radus"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Create Password Label -->
+        <TextView
+            android:id="@+id/tvPasswordLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Password"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+             />
+
+        <!-- Password Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="#CCCCCC"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#999999"
+            android:background="@drawable/all_corner_radus"
+            app:hintEnabled="false"
+
+            android:elevation="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/createPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter a secure password"
+                android:textColorHint="#999999"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:inputType="textPassword"
+                android:background="@drawable/all_corner_radus"
+/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Confirm Password Label -->
+        <TextView
+            android:id="@+id/tvConfirmPasswordLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+             />
+
+        <!-- Confirm Password Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="#CCCCCC"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#999999"
+            app:hintEnabled="false"
+            android:background="@drawable/all_corner_radus"
+            android:elevation="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Re-enter your password"
+                android:textColorHint="#999999"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:inputType="textPassword"
+                android:background="@drawable/all_corner_radus"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Sign Up Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sign_upBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Sign Up"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/btn_radus"
+            android:layout_marginTop="22dp"
+            android:elevation="2dp" />
+
+        <!-- Already have account text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:textSize="14sp"
+                android:textColor="@color/text_Secondary" />
+
+            <TextView
+                android:id="@+id/Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:textSize="14sp"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:focusable="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

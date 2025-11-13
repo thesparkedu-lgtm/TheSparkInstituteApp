@@ -1,13 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.TheSparkInstituteApp" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Base.Theme.TheSparkInstituteApp" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorSecondary">@color/Secondary</item>
 
-    </style><style name="nevbar_bacround">
 
-    <item name="android:background">#565656</item>
-</style>
+    </style>
+
+    <style name="nevbar_bacround">
+
+    </style>
+    <style name="background_page">
+        <item name="background">@color/backnigntcolor</item>
+    </style>
+
+
+    <!-- Text Color -->
+        <color name="text_color">#FFFFFFFF</color>
+        <color name="text_Secondary">#CDCDCD</color>
 </resources>
