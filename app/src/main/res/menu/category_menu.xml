@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/navodaya" android:title="Navodaya" />
+    <item android:id="@+id/computer" android:title="Computer" />
+    <item android:id="@+id/coaching" android:title="Coaching" />
+    <item android:id="@+id/competitive" android:title="Competitive"/>
+    <item android:id="@+id/all" android:title="All Notes" />
+</menu>
