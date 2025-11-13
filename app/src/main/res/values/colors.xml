@@ -4,11 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#FFD400</color>
     <color name="Secondary">#FFDB2A</color>
-        <color name="splash_background">#FFC423</color>
-        <color name="shield_maroon">#6B1C23</color>
-        <color name="text_dark_brown">#3D2310</color>
-        <color name="text_medium_brown">#5D3A1A</color>
-        <color name="wave_gold">#9D7728</color>
-        <color name="circle_stroke">#E0A420</color>
+    <color name="backcolor">#FFFBF3</color>
+    <color name="backnigntcolor">#E4E3E2</color>
+    <color name="backgroung_black">#B4B4B4</color>
+    <color name="backgroung_wite">#8A8A8A</color>
 
 </resources>

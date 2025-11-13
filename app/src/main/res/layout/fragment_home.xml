@@ -31,7 +31,7 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="52dp"
+                    android:layout_height="48dp"
                     android:src="@drawable/spark_logo"
                     android:contentDescription="Spark Institute Logo"/>
 
@@ -66,12 +66,49 @@
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:scaleType="centerCrop"
-                android:contentDescription="Company Advertisement Banner"/>
+            <ViewFlipper
 
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="12dp"
+                android:flipInterval="3000"
+                android:autoStart="true"
+                android:inAnimation="@anim/fade_slide_in_right"
+                android:layout_margin="14dp"
+                android:outAnimation="@anim/fade_slide_out_left">
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/competitive" />
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/computer" />
+
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="267dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/free_class_btn" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="267dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/navodaya" />
+            </ViewFlipper>
         </androidx.cardview.widget.CardView>
 
         <!-- All Courses Section Title -->
@@ -103,7 +140,7 @@
                 <!-- Navodaya Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="12dp"
@@ -113,25 +150,25 @@
                         android:id="@+id/NavodayaBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#FFF8E1"
-                        android:orientation="vertical"
-                        android:padding="16dp"
-                        android:gravity="bottom">
+                        android:background="#FFCD3C"
+                        android:orientation="horizontal"
+                        android:gravity="center">
 
-                        <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="end|top"
-                            android:layout_marginBottom="8dp"
-                            android:contentDescription="Navodaya icon"/>
+
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/navodaya"
                             android:textSize="16sp"
+                            android:layout_marginStart="8dp"
                             android:textStyle="bold"
                             android:textColor="#333333"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end|top"
+                            android:contentDescription="Navodaya icon"/>
 
                     </LinearLayout>
 
@@ -140,7 +177,7 @@
                 <!-- Competitive Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="12dp"
@@ -150,25 +187,25 @@
                         android:id="@+id/CompetitiveBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#E8EAF6"
-                        android:orientation="vertical"
-                        android:padding="16dp"
-                        android:gravity="bottom">
-
-                        <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="end|top"
-                            android:layout_marginBottom="8dp"
-                            android:contentDescription="Competitive icon"/>
+                        android:background="#F2DDF8
+"
+                        android:orientation="horizontal"
+                        android:gravity="center">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/competitive"
                             android:textSize="16sp"
+                            android:layout_marginStart="8dp"
                             android:textStyle="bold"
                             android:textColor="#333333"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/competitive"
+                            android:contentDescription="Navodaya icon"/>
 
                     </LinearLayout>
 
@@ -186,7 +223,7 @@
                 <!-- Computer Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="12dp"
@@ -196,25 +233,23 @@
                         android:id="@+id/ComputerBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#FFE0E0"
-                        android:orientation="vertical"
-                        android:padding="16dp"
-                        android:gravity="bottom">
-
-                        <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="end|top"
-                            android:layout_marginBottom="8dp"
-                            android:contentDescription="Computer icon"/>
+                        android:background="#CADEF9"
+                        android:orientation="horizontal"
+                        android:gravity="center">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Computer"
+                            android:text="@string/computer"
                             android:textSize="16sp"
+                            android:layout_marginStart="8dp"
                             android:textStyle="bold"
                             android:textColor="#333333"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end|top"
+                            android:contentDescription="Navodaya icon"/>
 
                     </LinearLayout>
 
@@ -223,7 +258,7 @@
                 <!-- Coaching Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="12dp"
@@ -233,25 +268,24 @@
                         android:id="@+id/CoachingBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#E0F2F1"
-                        android:orientation="vertical"
-                        android:padding="16dp"
-                        android:gravity="bottom">
-
-                        <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="end|top"
-                            android:layout_marginBottom="8dp"
-                            android:contentDescription="Coaching icon"/>
+                        android:background="#B5FFB5"
+                        android:orientation="horizontal"
+                        android:gravity="center">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Coaching"
+                            android:text="@string/coaching"
                             android:textSize="16sp"
+                            android:layout_marginStart="8dp"
                             android:textStyle="bold"
                             android:textColor="#333333"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/competitive"
+                            android:contentDescription="Navodaya icon"/>
 
                     </LinearLayout>
 
@@ -268,7 +302,7 @@
                 <!-- Notes Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="12dp"
@@ -278,36 +312,57 @@
                         android:id="@+id/NotesBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#D6E8FF"
-                        android:orientation="vertical"
-                        android:padding="16dp"
-                        android:gravity="bottom">
-
-                        <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="end|top"
-                            android:layout_marginBottom="8dp"
-                            android:contentDescription="Notes icon"/>
-
+                        android:background="#FFD4B9"
+                        android:orientation="horizontal"
+                        android:gravity="center">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Notes"
                             android:textSize="16sp"
+                            android:layout_marginStart="8dp"
                             android:textStyle="bold"
                             android:textColor="#333333"/>
-
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end|top"
+                            android:contentDescription="Navodaya icon"/>
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <!-- Empty space for alignment -->
-                <View
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
-                    android:layout_marginStart="6dp"/>
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#CAEFF9"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Free Study Material"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end|top"
+                            android:contentDescription="Navodaya icon"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -337,11 +392,12 @@
                 android:id="@+id/viewAllText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="View all"
-                android:textSize="14sp"
-                android:textColor="#7B68EE"
                 android:clickable="true"
-                android:focusable="true"/>
+                android:focusable="true"
+                android:text="View all"
+                android:textColor="#7B68EE"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <ImageView
                 android:layout_width="16dp"
@@ -358,15 +414,14 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginBottom="24dp"
-            app:cardCornerRadius="16dp"
+            app:cardCornerRadius="26dp"
             app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:background="#2C2749"
                 android:orientation="horizontal"
-                android:padding="20dp"
                 android:minHeight="160dp">
 
                 <!-- Text Content -->
@@ -375,54 +430,304 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical"
+                    android:layout_marginStart="20dp"
                     android:gravity="center_vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Spark free Classes"
-                        android:textSize="20sp"
+                        android:text="Spark Free Classes"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
                         android:layout_marginBottom="8dp"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:text="Online tuitions by Banarhat\nbest teachers"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         android:textColor="#B8BABD"
                         android:lineSpacingExtra="2dp"
                         android:layout_marginBottom="16dp"/>
 
-                    <TextView
-                        android:id="@+id/freeClassBtn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Free Class"
-                        android:textSize="16sp"
-                        android:textColor="#2C3E50"
+                    <Button
+                        android:layout_width="110dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/btn_radus"
                         android:textStyle="bold"
-                        android:background="#FFD93D"
-                        android:paddingStart="28dp"
-                        android:paddingEnd="28dp"
-                        android:paddingTop="12dp"
-                        android:paddingBottom="12dp"
-                        android:clickable="true"
-                        android:focusable="true"/>
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:text="Enroll Now"/>
 
                 </LinearLayout>
 
                 <!-- Illustration -->
                 <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="170dp"
+                    android:layout_height="167dp"
+                    android:layout_marginTop="19dp"
+                    android:src="@drawable/free_class_btn"
                     android:contentDescription="Teacher and student illustration"/>
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Featured Tutors"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <!-- Tutor 1 -->
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Ankit Kumar" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Ankit Duta"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bangla Educator"
+                        android:textSize="11sp"
+                        android:textColor="#666666" />
+                </LinearLayout>
+
+                <!-- Tutor 2 -->
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Priya Sharma" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Sartaj"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CEO"
+                        android:textSize="11sp"
+                        android:textColor="#666666" />
+                </LinearLayout>
+
+                <!-- Tutor 3 -->
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Rahul" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Ronit Roka"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edting Expert"
+                        android:textSize="11sp"
+                        android:textColor="#666666" />
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Free Study Material Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/free_study_material"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"  />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- PDF Notes Card -->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:padding="16dp">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PDF Notes"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Downloadable notes for all subjects"
+                        android:textSize="11sp"
+                        android:textColor="#666666"
+                        android:layout_marginBottom="12dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="📥 Download"
+                        android:textColor="#FF9800"
+                        android:textSize="12sp"
+                        android:background="@drawable/btn_radus" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Practice Questions Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:padding="16dp">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Practice Questions"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Test your knowledge with chapter-wise"
+                        android:textSize="11sp"
+                        android:textColor="#666666"
+                        android:layout_marginBottom="12dp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="📥 Download"
+                        android:textColor="#FF9800"
+                        android:textSize="12sp"
+                        android:background="@drawable/btn_radus" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        </HorizontalScrollView>
+
+
 
     </LinearLayout>
 

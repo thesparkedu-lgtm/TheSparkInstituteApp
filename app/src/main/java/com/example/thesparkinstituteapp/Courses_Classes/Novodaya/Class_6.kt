@@ -43,5 +43,6 @@ class Class_6 : Fragment() {
             Toast.makeText(requireContext(), "WhatsApp not installed!", Toast.LENGTH_SHORT).show()
         }
     }
+    
 
 }

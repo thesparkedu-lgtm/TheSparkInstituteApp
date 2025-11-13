@@ -5,6 +5,7 @@
         <item name="colorPrimary">#856F02</item>
         <item name="colorSecondary">#856F02</item>
 
+
     </style>
 
     <style name="Theme.TheSparkInstituteApp" parent="Base.Theme.TheSparkInstituteApp" />
@@ -13,4 +14,17 @@
 
         <item name="android:background">#F6FBFD</item>
     </style>
+    <style name="background_page">
+        <item name="background">@color/backcolor</item>
+    </style>
+
+    <style name="background_page_secondary">
+        <item name="background">@color/backgroung_wite</item>
+    </style>
+
+
+    <!--  Text Color -->
+        <color name="text_color">#000000</color>
+         <color name="text_Secondary">#666666</color>
+
 </resources>

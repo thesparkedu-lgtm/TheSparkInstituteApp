@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-   >
+    android:background="#2196F3">
 
     <!-- Header Section with Purple Gradient -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:orientation="horizontal"
+        android:background="@drawable/liner_computer"
         >
 
         <LinearLayout
@@ -24,7 +25,7 @@
                 android:layout_height="30dp"
                 android:layout_marginBottom="16dp"
                 android:contentDescription="Back button"
-                />
+                android:src="@drawable/back_btn" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -46,7 +47,7 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="45dp"
                 android:layout_marginStart="60dp"
-             >
+                android:src="@drawable/computer">
 
             </ImageView>
         </LinearLayout>
@@ -59,7 +60,32 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></LinearLayout>
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@drawable/top_corner_radus"
+        >
+
+        <!-- Chapters Section -->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="course"
+            android:layout_gravity="center"
+            android:src="@drawable/course" />
+        <!-- Courses Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Courses"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            />
+
+    </LinearLayout>
     <!-- Content Section -->
     <ScrollView
         android:layout_width="match_parent"
@@ -70,20 +96,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="@color/white"
             android:padding="16dp">
 
             <!-- Chapters Section -->
 
             <!-- Courses Label -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Courses"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                android:textStyle="bold"
-                android:textColor="#333333"
-                android:layout_marginBottom="16dp" />
+
+
 
             <!-- Course Cards -->
             <LinearLayout
@@ -106,6 +126,7 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_computer"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
@@ -132,6 +153,7 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_computer"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
@@ -154,10 +176,13 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/ADCA_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_computer"
+
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
@@ -182,11 +207,13 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/DCA_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:paddingStart="24dp"
+                        android:background="@drawable/outline_computer"
                         android:paddingEnd="24dp">
 
                         <TextView
@@ -210,11 +237,13 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Java_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:paddingStart="24dp"
+                        android:background="@drawable/outline_computer"
                         android:paddingEnd="24dp">
 
                         <TextView
@@ -238,10 +267,12 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Python_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_computer"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
@@ -266,10 +297,13 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Kotlin_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_computer"
+
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
@@ -292,10 +326,12 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Video_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_computer"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
@@ -318,17 +354,19 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Android_Development_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_computer"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="App Devlopment"
+                            android:text="Android Devlopment"
                             android:textSize="16sp"
                             android:textColor="#333333" />
 
@@ -344,10 +382,12 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Web_Development_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_computer"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
@@ -371,10 +411,12 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/Graphics_From_Computer_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:background="@drawable/outline_computer"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
