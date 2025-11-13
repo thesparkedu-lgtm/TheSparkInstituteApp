@@ -70,6 +70,7 @@ class notes_Fragment : Fragment() {
                 R.id.navodaya -> filterNotesBy("Navodaya")
                 R.id.computer -> filterNotesBy("Computer")
                 R.id.coaching -> filterNotesBy("Coaching")
+                R.id.competitive -> filterNotesBy("Competitive")
                 R.id.all -> showAllNotes()
             }
             true
