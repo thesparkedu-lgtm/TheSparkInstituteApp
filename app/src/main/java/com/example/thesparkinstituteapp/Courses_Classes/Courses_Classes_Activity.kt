@@ -17,6 +17,8 @@ import com.example.thesparkinstituteapp.Courses_Classes.Computer.Web_design
 import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreFreeMasterClass
 import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreNotes
 import com.example.thesparkinstituteapp.Courses_Classes.Novodaya.Navodaya_Fragment
+import com.example.thesparkinstituteapp.Free_Classes.PlayerFragment
+import com.example.thesparkinstituteapp.Free_Classes.VideosFragment
 import com.example.thesparkinstituteapp.Notes.notes_Fragment
 import com.example.thesparkinstituteapp.R
 
@@ -49,6 +51,7 @@ class Courses_Classes_Activity : AppCompatActivity() {
             "VideoEditing" -> Video_Editing_Fragment()
             "Graphic" -> Graphic_Fragment()
             "webDesign" -> Web_design()
+            "FreeClasses" -> VideosFragment()
             else -> Navodaya_Fragment()
         }
 
@@ -60,6 +63,17 @@ class Courses_Classes_Activity : AppCompatActivity() {
                 R.anim.fade_slide_in_left
             )
             .replace(R.id.fragment_container_2, fragment)
+            .commit()
+    }
+    fun openPlayerFragment(videoId: String) {
+        val fragment = PlayerFragment()
+        val bundle = Bundle()
+        bundle.putString("videoId", videoId)
+        fragment.arguments = bundle
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container_2, fragment)
+            .addToBackStack(null)
             .commit()
     }
 }

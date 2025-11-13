@@ -72,6 +72,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // glide and youtubePlayer
+    implementation("com.github.bumptech.glide:glide:5.0.5")
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.2")
 }
 
 

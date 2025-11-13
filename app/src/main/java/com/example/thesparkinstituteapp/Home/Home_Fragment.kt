@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Coaching.Coaching_Fragment
@@ -30,6 +31,14 @@ class HomeFragment : Fragment() {
         val computerBtn = view.findViewById<LinearLayout>(R.id.ComputerBtn)
         val coachingBtn = view.findViewById<LinearLayout>(R.id.CoachingBtn)
         val notesBtn = view.findViewById<LinearLayout>(R.id.NotesBtn)
+        val enrollBtn = view.findViewById<Button>(R.id.enrollBtn)
+
+        enrollBtn.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","FreeClasses")
+            startActivity(intent)
+        }
+
 
         navodayaBtn.setOnClickListener {
 
