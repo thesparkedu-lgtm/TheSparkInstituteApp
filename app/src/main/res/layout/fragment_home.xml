@@ -448,7 +448,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Spark Free Classes"
+                        android:text="Free MasterClasses"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
@@ -486,7 +486,7 @@
 
         </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/sparkFreeClassCard2"
+                android:id="@+id/sparkFreeClassCard3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -513,7 +513,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Spark Free Classes"
+                            android:text="Computer Free Classes"
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
@@ -550,6 +550,137 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sparkFreeClassCard4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="24dp"
+                    app:cardCornerRadius="26dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:background="#2C2749"
+                        android:orientation="horizontal"
+                        android:minHeight="160dp">
+
+                        <!-- Text Content -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="20dp"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Competitive Free Classes"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:layout_marginBottom="8dp"/>
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="Online tuitions by Banarhat\nbest teachers"
+                                android:textSize="12sp"
+                                android:textColor="#B8BABD"
+                                android:lineSpacingExtra="2dp"
+                                android:layout_marginBottom="16dp"/>
+
+                            <Button
+                                android:layout_width="110dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/btn_radus"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:text="Enroll Now"/>
+
+                        </LinearLayout>
+
+                        <!-- Illustration -->
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="167dp"
+                            android:layout_marginTop="19dp"
+                            android:src="@drawable/free_class_btn"
+                            android:contentDescription="Teacher and student illustration"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sparkFreeClassCard5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="24dp"
+                    app:cardCornerRadius="26dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:background="#2C2749"
+                        android:orientation="horizontal"
+                        android:minHeight="160dp">
+
+                        <!-- Text Content -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="20dp"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Coaching Free Classes"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:layout_marginBottom="8dp"/>
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="Online tuitions by Banarhat\nbest teachers"
+                                android:textSize="12sp"
+                                android:textColor="#B8BABD"
+                                android:lineSpacingExtra="2dp"
+                                android:layout_marginBottom="16dp"/>
+
+                            <Button
+                                android:layout_width="110dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/btn_radus"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:text="Enroll Now"/>
+
+                        </LinearLayout>
+
+                        <!-- Illustration -->
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="167dp"
+                            android:layout_marginTop="19dp"
+                            android:src="@drawable/free_class_btn"
+                            android:contentDescription="Teacher and student illustration"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
         </HorizontalScrollView>
         <TextView
