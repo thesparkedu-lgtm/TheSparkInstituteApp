@@ -9,7 +9,7 @@
     <!-- Header Section with Purple Gradient -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="180dp"
         android:orientation="horizontal"
         android:background="@drawable/liner_navodaya"
         >
@@ -64,21 +64,19 @@
     <!-- Content Section -->
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="800dp"
         android:background="@drawable/top_corner_radus"
+        android:orientation="vertical"
         android:padding="16dp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
 
             <!-- Chapters Section -->
             <ImageView
@@ -90,13 +88,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Classes"
-                android:textSize="20sp"
                 android:layout_gravity="center"
                 android:layout_marginStart="5dp"
-                android:textStyle="bold"
+                android:text="Classes"
                 android:textColor="#333333"
-                />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -104,25 +101,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
 
             <!-- Agniveer Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="#99FFB400"
                 app:cardCornerRadius="28dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="#99FFB400">
+                app:cardElevation="2dp">
 
                 <LinearLayout
                     android:id="@+id/Class6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
                     android:background="@drawable/outline_navodaya"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     android:paddingStart="24dp"
                     android:paddingEnd="24dp">
 
@@ -130,9 +127,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Class 6"
-                        android:textStyle="bold"
+                        android:textColor="#333333"
                         android:textSize="20sp"
-                        android:textColor="#333333" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -143,27 +140,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="#99FFB400"
                 app:cardCornerRadius="28dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="#99FFB400">
+                app:cardElevation="2dp">
 
                 <LinearLayout
                     android:id="@+id/Class9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingStart="24dp"
                     android:background="@drawable/outline_navodaya"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp"
                     android:paddingEnd="24dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Class 9"
+                        android:textColor="#333333"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="#333333" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -174,27 +171,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="#99FFB400"
                 app:cardCornerRadius="28dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="#99FFB400">
+                app:cardElevation="2dp">
 
                 <LinearLayout
                     android:id="@+id/Class11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingStart="24dp"
                     android:background="@drawable/outline_navodaya"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp"
                     android:paddingEnd="24dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Class 11"
+                        android:textColor="#333333"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="#333333" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -204,10 +201,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-
 
 
 </LinearLayout>

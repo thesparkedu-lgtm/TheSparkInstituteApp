@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
+        style="@style/background_page"
         android:contentDescription="Download PDF"
         app:srcCompat="@android:drawable/stat_sys_download_done"
         app:tint="@android:color/white"
