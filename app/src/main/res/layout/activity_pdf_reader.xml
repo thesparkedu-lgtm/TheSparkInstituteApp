@@ -22,9 +22,9 @@
     <!-- Download Button at bottom -->
     <Button
         android:id="@+id/downloadBtn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Download PDF"
-        android:layout_gravity="bottom"
+        android:layout_gravity="bottom|center"
         android:layout_margin="8dp" />
 </FrameLayout>
