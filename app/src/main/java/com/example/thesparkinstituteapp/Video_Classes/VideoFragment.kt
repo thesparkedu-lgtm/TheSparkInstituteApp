@@ -20,29 +20,35 @@ class VideoFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-
-    ): View? {
+    ): View {
 
         val view = inflater.inflate(R.layout.fragment_video, container, false)
+
         recyclerView = view.findViewById(R.id.videoRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         adapter = VideoAdapter(videoList) { video ->
-            openVideoPlayer(video.videoId)
+            openVideoPlayer(video.videoId, video.videoInfo)
         }
+
+
         recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
 
         fetchVideos()
+
         return view
     }
 
     private fun fetchVideos() {
         val database = FirebaseDatabase.getInstance()
-            .getReference("videos")
+            .getReference("videos")   // ← change here if needed
 
         database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 videoList.clear()
+
                 for (videoSnap in snapshot.children) {
                     val video = videoSnap.getValue(VideoModel::class.java)
                     if (video != null) videoList.add(video)
@@ -56,10 +62,11 @@ class VideoFragment : Fragment() {
         })
     }
 
-    private fun openVideoPlayer(videoId: String) {
+    private fun openVideoPlayer(videoId: String, videoInfo: String) {
         val fragment = VideoPlayerFragment()
         val bundle = Bundle()
         bundle.putString("videoId", videoId)
+        bundle.putString("videoInfo", videoInfo)
         fragment.arguments = bundle
 
         parentFragmentManager.beginTransaction()

@@ -26,8 +26,6 @@
 
         <activity
             android:name=".Courses_Classes.Courses_Classes_Activity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
             android:exported="false" />
 
         <activity
