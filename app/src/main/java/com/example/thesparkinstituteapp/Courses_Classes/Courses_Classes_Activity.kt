@@ -18,7 +18,7 @@ import com.example.thesparkinstituteapp.Courses_Classes.Computer.SpokenEnglish_B
 import com.example.thesparkinstituteapp.Courses_Classes.Computer.Video_Editing_Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Computer.Web_design
 import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreFreeMasterClass
-import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreNotes
+//import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreNotes
 import com.example.thesparkinstituteapp.Courses_Classes.Novodaya.Navodaya_Fragment
 import com.example.thesparkinstituteapp.Free_Classes.PlayerFragment
 import com.example.thesparkinstituteapp.Free_Classes.VideosFragment
