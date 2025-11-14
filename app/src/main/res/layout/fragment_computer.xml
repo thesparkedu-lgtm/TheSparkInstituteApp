@@ -123,6 +123,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/SpokenEngBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -150,6 +151,7 @@
                     app:cardBackgroundColor="#722196F3">
 
                     <LinearLayout
+                        android:id="@+id/SpokenEng_CompBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"

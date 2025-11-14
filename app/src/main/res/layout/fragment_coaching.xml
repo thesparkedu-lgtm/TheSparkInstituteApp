@@ -130,6 +130,7 @@
                     app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
+                        android:id="@+id/class12Btn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -160,6 +161,7 @@
                     app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
+                        android:id="@+id/science11_12Btn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -199,6 +201,7 @@
                     app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
+                        android:id="@+id/scienceBTn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -228,6 +231,7 @@
                     app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
+                        android:id="@+id/mathBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -257,6 +261,7 @@
                     app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
+                        android:id="@+id/englishFocusBTn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"

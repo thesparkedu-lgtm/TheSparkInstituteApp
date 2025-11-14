@@ -28,7 +28,27 @@ class Computer_Fragment : Fragment() {
         val VideoEditing = view.findViewById<LinearLayout>(R.id.Video_From_Computer_Fragment)
         val webDesign = view.findViewById<LinearLayout>(R.id.Web_Development_From_Computer_Fragment)
         val Graphic = view.findViewById<LinearLayout>(R.id.Graphics_From_Computer_Fragment)
+        val python = view.findViewById<LinearLayout>(R.id.Python_From_Computer_Fragment)
+        val spokenEnglish = view.findViewById<LinearLayout>(R.id.SpokenEngBtn)
+        val spokenEng_Comp = view.findViewById<LinearLayout>(R.id.SpokenEng_CompBtn)
 
+        spokenEnglish.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","SpokenEnglish")
+            startActivity(intent)
+        }
+
+        spokenEng_Comp.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","SpokenEnglish_BasicComputer")
+            startActivity(intent)
+        }
+
+        python.setOnClickListener {
+            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
+            intent.putExtra("fragmentToLoad","Python")
+            startActivity(intent)
+        }
 
         ADCA.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)

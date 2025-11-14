@@ -12,15 +12,16 @@ import android.widget.Toast
 import com.example.thesparkinstituteapp.R
 
 
-class Web_design : Fragment() {
+class Python_Fragment : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_web_design, container, false)
+     val view = inflater.inflate(R.layout.fragment_python_, container, false)
 
-        val whatsappButton = view.findViewById<LinearLayout>(R.id.WhatsappBtnWebDesign)
+        val whatsappButton = view.findViewById<LinearLayout>(R.id.WhatsappBtnPython)
 
         whatsappButton.setOnClickListener {
             openWhatsApp()

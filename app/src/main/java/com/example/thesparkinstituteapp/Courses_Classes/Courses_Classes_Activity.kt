@@ -12,6 +12,9 @@ import com.example.thesparkinstituteapp.Courses_Classes.Computer.DCA_Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Computer.Graphic_Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Computer.Java_Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Computer.Kotlin_Fragment
+import com.example.thesparkinstituteapp.Courses_Classes.Computer.Python_Fragment
+import com.example.thesparkinstituteapp.Courses_Classes.Computer.SpokenEnglish
+import com.example.thesparkinstituteapp.Courses_Classes.Computer.SpokenEnglish_BasicComputer
 import com.example.thesparkinstituteapp.Courses_Classes.Computer.Video_Editing_Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Computer.Web_design
 import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreFreeMasterClass
@@ -52,6 +55,10 @@ class Courses_Classes_Activity : AppCompatActivity() {
             "Graphic" -> Graphic_Fragment()
             "webDesign" -> Web_design()
             "FreeClasses" -> VideosFragment()
+            "SpokenEnglish" -> SpokenEnglish()
+            "SpokenEnglish_BasicComputer" -> SpokenEnglish_BasicComputer()
+            "Python" -> Python_Fragment()
+
             else -> Navodaya_Fragment()
         }
 

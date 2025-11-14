@@ -30,7 +30,7 @@ class Class_6 : Fragment() {
     return view
     }
 
-    private fun openWhatsApp() {
+  private fun openWhatsApp() {
         val phoneNumber = "919832116164"
         val message = "Hello! I want to know more about The Spark Institute."
 

@@ -21,15 +21,15 @@
             <!-- Title -->
             <TextView
                 android:id="@+id/titleText"
-                android:layout_width="wrap_content"
+                android:layout_width="258dp"
                 android:layout_height="wrap_content"
-                android:text="Android Development "
-                android:textSize="28sp"
-                android:textColor="#2C3E50"
-                android:textStyle="bold"
-                android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="16dp"/>
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:text="Spoken English + Basic Computer"
+                android:textColor="#2C3E50"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <!-- Target Illustration -->
             <ImageView
@@ -126,7 +126,7 @@
                 android:layout_marginBottom="20dp">
 
                 <LinearLayout
-                    android:id="@+id/WhatsappBtnAndroidDev"
+                    android:id="@+id/WhatsappBtnSpokenEng_Comp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"

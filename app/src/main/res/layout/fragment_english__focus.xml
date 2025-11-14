@@ -23,7 +23,7 @@
                 android:id="@+id/titleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Android Development "
+                android:text="English Focus                "
                 android:textSize="28sp"
                 android:textColor="#2C3E50"
                 android:textStyle="bold"
@@ -126,7 +126,7 @@
                 android:layout_marginBottom="20dp">
 
                 <LinearLayout
-                    android:id="@+id/WhatsappBtnAndroidDev"
+                    android:id="@+id/WhatsappBtnEng_Focus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"

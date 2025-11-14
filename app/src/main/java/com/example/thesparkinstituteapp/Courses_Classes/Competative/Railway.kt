@@ -1,4 +1,4 @@
-package com.example.thesparkinstituteapp.Courses_Classes.Computer
+package com.example.thesparkinstituteapp.Courses_Classes.Competative
 
 import android.content.Intent
 import android.net.Uri
@@ -12,23 +12,20 @@ import android.widget.Toast
 import com.example.thesparkinstituteapp.R
 
 
-class Web_design : Fragment() {
+class Railway : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_web_design, container, false)
-
-        val whatsappButton = view.findViewById<LinearLayout>(R.id.WhatsappBtnWebDesign)
+        val view = inflater.inflate(R.layout.fragment_railway, container, false)
+        val whatsappButton = view.findViewById<LinearLayout>(R.id.WhatsappBtnRailway)
 
         whatsappButton.setOnClickListener {
             openWhatsApp()
         }
-
         return view
     }
-
 
     fun openWhatsApp() {
         val phoneNumber = "919832116164"

@@ -1,4 +1,4 @@
-package com.example.thesparkinstituteapp.Courses_Classes.Computer
+package com.example.thesparkinstituteapp.Courses_Classes.Coaching
 
 import android.content.Intent
 import android.net.Uri
@@ -12,15 +12,15 @@ import android.widget.Toast
 import com.example.thesparkinstituteapp.R
 
 
-class Web_design : Fragment() {
+class English_Focus : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_web_design, container, false)
-
-        val whatsappButton = view.findViewById<LinearLayout>(R.id.WhatsappBtnWebDesign)
+       val view = inflater.inflate(R.layout.fragment_english__focus, container, false)
+        val whatsappButton = view.findViewById<LinearLayout>(R.id.WhatsappBtnEng_Focus)
 
         whatsappButton.setOnClickListener {
             openWhatsApp()
@@ -28,8 +28,6 @@ class Web_design : Fragment() {
 
         return view
     }
-
-
     fun openWhatsApp() {
         val phoneNumber = "919832116164"
         val message = "Hello! I want to know more about The Spark Institute."
@@ -43,4 +41,5 @@ class Web_design : Fragment() {
             Toast.makeText(requireContext(), "WhatsApp not installed!", Toast.LENGTH_SHORT).show()
         }
     }
+
 }
