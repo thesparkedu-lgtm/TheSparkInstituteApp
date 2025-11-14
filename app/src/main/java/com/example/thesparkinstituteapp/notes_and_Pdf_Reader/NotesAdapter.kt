@@ -1,10 +1,11 @@
-package com.example.thesparkinstituteapp
+package com.example.thesparkinstituteapp.notes_and_Pdf_Reader
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.thesparkinstituteapp.R
 
 class NotesAdapter(
     private val notes: List<Note>,

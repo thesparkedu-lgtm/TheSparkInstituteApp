@@ -31,11 +31,11 @@ class HomeFragment : Fragment() {
         val computerBtn = view.findViewById<LinearLayout>(R.id.ComputerBtn)
         val coachingBtn = view.findViewById<LinearLayout>(R.id.CoachingBtn)
         val notesBtn = view.findViewById<LinearLayout>(R.id.NotesBtn)
-        val enrollBtn = view.findViewById<Button>(R.id.enrollBtn)
+        val studymaterial = view.findViewById<LinearLayout>(R.id.FreeStudyMaterial)
 
-        enrollBtn.setOnClickListener {
+        studymaterial.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","FreeClasses")
+            intent.putExtra("fragmentToLoad","StudyMaterial")
             startActivity(intent)
         }
 

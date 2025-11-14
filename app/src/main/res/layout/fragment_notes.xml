@@ -5,7 +5,7 @@
     android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notes.notes_Fragment">
+    tools:context=".notes_and_Pdf_Reader.notes_Fragment">
 
     <LinearLayout
         android:id="@+id/notesLayout"

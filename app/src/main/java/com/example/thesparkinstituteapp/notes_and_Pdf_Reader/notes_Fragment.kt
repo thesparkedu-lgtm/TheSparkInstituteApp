@@ -1,8 +1,10 @@
-package com.example.thesparkinstituteapp.Notes
+package com.example.thesparkinstituteapp.notes_and_Pdf_Reader
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.PopupMenu
 import android.widget.ProgressBar
@@ -11,11 +13,15 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.example.thesparkinstituteapp.Note
-import com.example.thesparkinstituteapp.NotesAdapter
-import com.example.thesparkinstituteapp.Pdf_reader
+import com.example.thesparkinstituteapp.notes_and_Pdf_Reader.Note
+import com.example.thesparkinstituteapp.notes_and_Pdf_Reader.NotesAdapter
+import com.example.thesparkinstituteapp.notes_and_Pdf_Reader.Pdf_reader
 import com.example.thesparkinstituteapp.R
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class notes_Fragment : Fragment() {
 
