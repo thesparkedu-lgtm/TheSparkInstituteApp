@@ -28,7 +28,7 @@ class VideoAdapter(
     override fun onBindViewHolder(holder: VideoViewHolder, position: Int) {
         val video = videoList[position]
         holder.title.text = video.videoTitle
-        holder.description.text = video.videoInfo   // use videoInfo
+        holder.description.text = video.videoInfo
 
         holder.itemView.setOnClickListener {
             onVideoClick(video)
