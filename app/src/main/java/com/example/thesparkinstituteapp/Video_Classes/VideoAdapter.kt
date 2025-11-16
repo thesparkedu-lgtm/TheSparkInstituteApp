@@ -9,14 +9,15 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import com.example.thesparkinstituteapp.R
 
+
 class VideoAdapter(
     private val videoList: List<VideoModel>,
     private val onVideoClick: (VideoModel) -> Unit
 ) : RecyclerView.Adapter<VideoAdapter.VideoViewHolder>() {
 
     class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val title = itemView.findViewById<TextView>(R.id.videoTitle)
-        val description = itemView.findViewById<TextView>(R.id.videoDescription)
+        val title: TextView = itemView.findViewById(R.id.videoTitle)
+        val info: TextView = itemView.findViewById(R.id.videoDescription) // this is videoInfo in list
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VideoViewHolder {
@@ -27,15 +28,14 @@ class VideoAdapter(
 
     override fun onBindViewHolder(holder: VideoViewHolder, position: Int) {
         val video = videoList[position]
+
         holder.title.text = video.videoTitle
-        holder.description.text = video.videoInfo
+        holder.info.text = video.videoInfo   // ONLY info shown in list
 
         holder.itemView.setOnClickListener {
-            onVideoClick(video)
+            onVideoClick(video)              // send full model
         }
     }
 
     override fun getItemCount(): Int = videoList.size
 }
-
-

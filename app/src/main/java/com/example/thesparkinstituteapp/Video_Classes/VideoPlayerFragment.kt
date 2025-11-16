@@ -18,7 +18,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTube
 class VideoPlayerFragment : Fragment() {
 
     private var videoId: String? = null
-    private var videoInfo: String? = null
+    private var videoDescription: String? = null  // FULL DESCRIPTION
     private var isFullScreen = false
 
     private lateinit var youTubePlayerView: YouTubePlayerView
@@ -30,17 +30,14 @@ class VideoPlayerFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         videoId = arguments?.getString("videoId")
-        videoInfo = arguments?.getString("videoInfo")
+        videoDescription = arguments?.getString("videoDescription")
 
-        // Handle back press
         requireActivity().onBackPressedDispatcher.addCallback(this,
             object : OnBackPressedCallback(true) {
                 override fun handleOnBackPressed() {
                     if (isFullScreen) {
-                        // Exit fullscreen first
                         exitFullScreen()
                     } else {
-                        // Let the system handle back (pop fragment)
                         isEnabled = false
                         requireActivity().onBackPressed()
                     }
@@ -54,46 +51,40 @@ class VideoPlayerFragment : Fragment() {
     ): View {
         val view = inflater.inflate(R.layout.fragment_video_player, container, false)
 
-        // Initialize views
         youTubePlayerView = view.findViewById(R.id.youtubePlayerView)
-        videoInfoText = view.findViewById(R.id.videoInfoText)
+        videoInfoText = view.findViewById(R.id.videoDescription)
         fullscreenBtn = view.findViewById(R.id.fullscreenBtn)
         descriptionScroll = view.findViewById(R.id.scrollView)
 
-        videoInfoText.text = videoInfo ?: "No description available"
+        // FULL description shown here
+        videoInfoText.text = videoDescription ?: "No description available"
 
-        // Add YouTube player lifecycle
         lifecycle.addObserver(youTubePlayerView)
 
-        // Load video
         youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
             override fun onReady(player: YouTubePlayer) {
                 videoId?.let { player.loadVideo(it, 0f) }
             }
         })
 
-        fullscreenBtn.setOnClickListener {
-            toggleFullScreen()
-        }
+        fullscreenBtn.setOnClickListener { toggleFullScreen() }
 
-        // Lock orientation initially
         requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         return view
     }
 
     private fun toggleFullScreen() {
-        val params = youTubePlayerView.layoutParams as androidx.constraintlayout.widget.ConstraintLayout.LayoutParams
+        val params =
+            youTubePlayerView.layoutParams as androidx.constraintlayout.widget.ConstraintLayout.LayoutParams
 
         if (!isFullScreen) {
-            // Enter fullscreen
             requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
             descriptionScroll.visibility = View.GONE
 
-            // Remove dimension ratio to let player fill width and height
             params.dimensionRatio = null
-            params.width = androidx.constraintlayout.widget.ConstraintLayout.LayoutParams.MATCH_PARENT
-            params.height = androidx.constraintlayout.widget.ConstraintLayout.LayoutParams.MATCH_PARENT
+            params.width = ViewGroup.LayoutParams.MATCH_PARENT
+            params.height = ViewGroup.LayoutParams.MATCH_PARENT
             youTubePlayerView.layoutParams = params
 
             isFullScreen = true
@@ -106,8 +97,8 @@ class VideoPlayerFragment : Fragment() {
         requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         descriptionScroll.visibility = View.VISIBLE
 
-        // Restore 16:9 aspect ratio in portrait
-        val params = youTubePlayerView.layoutParams as androidx.constraintlayout.widget.ConstraintLayout.LayoutParams
+        val params =
+            youTubePlayerView.layoutParams as androidx.constraintlayout.widget.ConstraintLayout.LayoutParams
         params.width = 0
         params.height = 0
         params.dimensionRatio = "16:9"
@@ -115,7 +106,6 @@ class VideoPlayerFragment : Fragment() {
 
         isFullScreen = false
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
