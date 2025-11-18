@@ -12,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@android:color/background_light">
+        >
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@color/white"
+            android:background="@color/text_Secondary"
             >
 
             <androidx.appcompat.widget.Toolbar
@@ -33,7 +33,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Notes"
-                        android:textColor="#202143"
                         android:textStyle="bold"
                         android:textSize="26sp"/>
 
@@ -49,7 +48,7 @@
             android:layout_height="wrap_content"
             android:text="Select Category"
             android:textAllCaps="false"
-            android:textColor="@color/text_Secondary"
+            android:textColor="@color/text_color"
             android:textSize="16sp"
             android:layout_margin="16dp"
             android:background="@drawable/all_corner_radus"

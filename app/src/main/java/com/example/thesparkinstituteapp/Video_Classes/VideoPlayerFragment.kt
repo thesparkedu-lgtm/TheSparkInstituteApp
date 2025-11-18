@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
@@ -23,7 +24,7 @@ class VideoPlayerFragment : Fragment() {
 
     private lateinit var youTubePlayerView: YouTubePlayerView
     private lateinit var videoInfoText: TextView
-    private lateinit var fullscreenBtn: ImageButton
+    private lateinit var fullscreenBtn: ImageView
     private lateinit var descriptionScroll: ScrollView
 
     override fun onCreate(savedInstanceState: Bundle?) {

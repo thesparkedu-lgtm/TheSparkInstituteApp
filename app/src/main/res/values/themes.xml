@@ -4,6 +4,8 @@
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">#856F02</item>
         <item name="colorSecondary">#856F02</item>
+        <item name="background">@color/backgroung_black</item>
+
 
 
     </style>
@@ -12,7 +14,6 @@
 
     <style name="nevbar_bacround">
 
-        <item name="android:background">#F6FBFD</item>
     </style>
     <style name="background_page">
         <item name="background">@color/backcolor</item>
