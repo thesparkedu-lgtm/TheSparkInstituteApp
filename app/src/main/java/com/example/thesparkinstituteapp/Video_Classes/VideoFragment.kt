@@ -43,10 +43,10 @@ class VideoFragment : Fragment() {
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = spinnerAdapter
 
-        // FIXED: Now we send FULL DESCRIPTION
         adapter = VideoAdapter(filteredList) { video ->
-            openVideoPlayer(video.videoId, video.videoDescription)
+            openVideoPlayer(video.videoId, video.videoDescription, video.videoInfo)
         }
+
         recyclerView.adapter = adapter
 
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -98,12 +98,12 @@ class VideoFragment : Fragment() {
         adapter.notifyDataSetChanged()
     }
 
-    // FIXED: Now passing videoDescription to player fragment
-    private fun openVideoPlayer(videoId: String, videoDescription: String) {
+    private fun openVideoPlayer(videoId: String, videoDescription: String, videoInfo: String) {
         val fragment = VideoPlayerFragment()
         val bundle = Bundle()
         bundle.putString("videoId", videoId)
         bundle.putString("videoDescription", videoDescription)
+        bundle.putString("videoInfo", videoInfo)
         fragment.arguments = bundle
 
         parentFragmentManager.beginTransaction()

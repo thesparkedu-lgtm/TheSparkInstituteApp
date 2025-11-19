@@ -19,11 +19,14 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTube
 class VideoPlayerFragment : Fragment() {
 
     private var videoId: String? = null
-    private var videoDescription: String? = null  // FULL DESCRIPTION
+    private var videoInfo: String? = null
+    private var videoDescription: String? = null
+
     private var isFullScreen = false
 
     private lateinit var youTubePlayerView: YouTubePlayerView
-    private lateinit var videoInfoText: TextView
+    private lateinit var infoText: TextView
+    private lateinit var descText: TextView
     private lateinit var fullscreenBtn: ImageView
     private lateinit var descriptionScroll: ScrollView
 
@@ -31,6 +34,7 @@ class VideoPlayerFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         videoId = arguments?.getString("videoId")
+        videoInfo = arguments?.getString("videoInfo")
         videoDescription = arguments?.getString("videoDescription")
 
         requireActivity().onBackPressedDispatcher.addCallback(this,
@@ -50,15 +54,18 @@ class VideoPlayerFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         val view = inflater.inflate(R.layout.fragment_video_player, container, false)
 
         youTubePlayerView = view.findViewById(R.id.youtubePlayerView)
-        videoInfoText = view.findViewById(R.id.videoDescription)
+        infoText = view.findViewById(R.id.videoInfoText)
+        descText = view.findViewById(R.id.videoDescription)
         fullscreenBtn = view.findViewById(R.id.fullscreenBtn)
         descriptionScroll = view.findViewById(R.id.scrollView)
 
-        // FULL description shown here
-        videoInfoText.text = videoDescription ?: "No description available"
+        // Set text
+        infoText.text = videoInfo ?: "No Info Available"
+        descText.text = videoDescription ?: "No Description Available"
 
         lifecycle.addObserver(youTubePlayerView)
 
@@ -76,8 +83,8 @@ class VideoPlayerFragment : Fragment() {
     }
 
     private fun toggleFullScreen() {
-        val params =
-            youTubePlayerView.layoutParams as androidx.constraintlayout.widget.ConstraintLayout.LayoutParams
+        val params = youTubePlayerView.layoutParams as
+                androidx.constraintlayout.widget.ConstraintLayout.LayoutParams
 
         if (!isFullScreen) {
             requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
@@ -98,8 +105,9 @@ class VideoPlayerFragment : Fragment() {
         requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         descriptionScroll.visibility = View.VISIBLE
 
-        val params =
-            youTubePlayerView.layoutParams as androidx.constraintlayout.widget.ConstraintLayout.LayoutParams
+        val params = youTubePlayerView.layoutParams as
+                androidx.constraintlayout.widget.ConstraintLayout.LayoutParams
+
         params.width = 0
         params.height = 0
         params.dimensionRatio = "16:9"
