@@ -37,12 +37,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
-            android:id="@+id/videoDescription"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/text_Secondary" />
+            android:orientation="vertical">
+
+            <!-- VIDEO INFO (BOLD + BIG) -->
+            <TextView
+                android:id="@+id/videoInfoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Video Info Here"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:paddingBottom="8dp" />
+
+            <!-- FULL VIDEO DESCRIPTION -->
+            <TextView
+                android:id="@+id/videoDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full description goes here..."
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
 
 
     </ScrollView>
