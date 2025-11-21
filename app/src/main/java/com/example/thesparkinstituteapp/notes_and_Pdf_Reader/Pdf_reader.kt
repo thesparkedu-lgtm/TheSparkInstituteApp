@@ -1,7 +1,6 @@
-package com.example.thesparkinstituteapp
+package com.example.thesparkinstituteapp.notes_and_Pdf_Reader
 
 import android.app.DownloadManager
-import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -12,6 +11,7 @@ import android.webkit.WebViewClient
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.thesparkinstituteapp.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Pdf_reader : AppCompatActivity() {
@@ -77,7 +77,7 @@ class Pdf_reader : AppCompatActivity() {
                     url.substringAfterLast("/")
                 )
 
-            val dm = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+            val dm = getSystemService(DOWNLOAD_SERVICE) as DownloadManager
             dm.enqueue(request)
             Toast.makeText(this, "Download started", Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {

@@ -1,13 +1,10 @@
 package com.example.thesparkinstituteapp
 
-import android.R.attr.visibility
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.thesparkinstituteapp.Courses_Classes.Novodaya.Navodaya_Fragment
 import com.example.thesparkinstituteapp.Explore.Explore_Fragment
 import com.example.thesparkinstituteapp.Home.HomeFragment
 import com.example.thesparkinstituteapp.Profile.ProfileFragment
@@ -16,7 +13,6 @@ import com.example.thesparkinstituteapp.sharedPre.SharedPrefHelper
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.google.firebase.auth.FirebaseAuth
-import kotlin.jvm.java
 
 class MainActivity : AppCompatActivity() {
 

@@ -5,6 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorSecondary">@color/Secondary</item>
+        <item name="background">@color/backgroung_wite</item>
 
 
     </style>
@@ -13,7 +14,7 @@
 
     </style>
     <style name="background_page">
-        <item name="background">@color/backnigntcolor</item>
+        <item name="background">@color/backgroung_wite</item>
     </style>
 
     <style name="background_page_secondary">

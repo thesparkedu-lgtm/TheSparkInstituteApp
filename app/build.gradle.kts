@@ -75,7 +75,8 @@ dependencies {
 
     // glide and youtubePlayer
     implementation("com.github.bumptech.glide:glide:5.0.5")
-    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.2")
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:13.0.0")
 }
+
 
 
