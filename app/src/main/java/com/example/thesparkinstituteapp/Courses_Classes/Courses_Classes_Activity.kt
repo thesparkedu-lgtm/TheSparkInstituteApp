@@ -43,13 +43,6 @@ class Courses_Classes_Activity : AppCompatActivity() {
             "ExploreNotes" -> notes_Fragment()
             "ExploreFreeMasterClass" -> ExploreFreeMasterClass()
             "notesBtn" -> notes_Fragment()
-            "ADCA" -> ADCA_Fragment()
-            "DCA" -> DCA_Fragment()
-            "Java" -> Java_Fragment()
-            "Kotlin" -> Kotlin_Fragment()
-            "Android_Development" -> Android_Development()
-            "Graphic" -> Graphic_Fragment()
-            "webDesign" -> Web_design()
             "StudyMaterial" -> VideoFragment()
             else -> Navodaya_Fragment()
 
@@ -68,10 +61,7 @@ class Courses_Classes_Activity : AppCompatActivity() {
             .replace(R.id.fragment_container_2, fragment)
             .commit()
 
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container_2,fragment)
-            .addToBackStack(null)
-            .commit()
+
 
 
     }

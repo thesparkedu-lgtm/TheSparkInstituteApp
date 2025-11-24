@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:fillViewport="true"
     android:background="#FFF8F0">
 
@@ -107,6 +108,24 @@
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
                 android:layout_marginBottom="20dp">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/smallMapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:clickable="true"
+                    tools:ignore="MissingClass" />
+
+                <ImageView
+                    android:id="@+id/btnOpenFullMap"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/round_white_bg"
+                    android:src="@drawable/baseline_arrow_forward_24"
+                    android:contentDescription="Open Full Map" />
 
             </androidx.cardview.widget.CardView>
 

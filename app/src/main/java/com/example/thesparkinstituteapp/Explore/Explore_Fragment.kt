@@ -8,12 +8,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import com.example.thesparkinstituteapp.Courses_Classes.Coaching.Coaching_Fragment
+import com.example.thesparkinstituteapp.Courses_Classes.Competative.Competative_Fragment
+import com.example.thesparkinstituteapp.Courses_Classes.Computer.Computer_Fragment
 import com.example.thesparkinstituteapp.Courses_Classes.Courses_Classes_Activity
 import com.example.thesparkinstituteapp.Courses_Classes.ExtraCourses.ExploreFreeMasterClass
 import com.example.thesparkinstituteapp.Courses_Classes.Novodaya.Class_9
 import com.example.thesparkinstituteapp.Courses_Classes.Novodaya.Navodaya_Fragment
 import com.example.thesparkinstituteapp.MainActivity
 import com.example.thesparkinstituteapp.R
+import com.example.thesparkinstituteapp.notes_and_Pdf_Reader.notes_Fragment
 import kotlin.jvm.java
 
 class Explore_Fragment : Fragment() {
@@ -42,34 +46,36 @@ class Explore_Fragment : Fragment() {
 
         ExploreCompetative.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","ExploreCompetative")
+            intent.putExtra("fragmentToLoad", "ExploreCompetative")
             startActivity(intent)
         }
 
         ExploreCoaching.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","ExploreCoaching")
+            intent.putExtra("fragmentToLoad", "ExploreCoaching")
             startActivity(intent)
         }
 
         ExploreComputer.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","ExploreComputer")
+            intent.putExtra("fragmentToLoad", "ExploreComputer")
             startActivity(intent)
         }
 
         ExploreFreeMasterClass.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","ExploreFreeMasterClass")
+            intent.putExtra("fragmentToLoad", "ExploreFreeMasterClass")
             startActivity(intent)
         }
 
         ExploreNotes.setOnClickListener {
             val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","ExploreNotes")
+            intent.putExtra("fragmentToLoad", "ExploreNotes")
             startActivity(intent)
         }
 
         return view
     }
+
+
 }
