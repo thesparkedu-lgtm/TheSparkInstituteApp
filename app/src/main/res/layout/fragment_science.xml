@@ -26,6 +26,8 @@
                 android:text="Science                "
                 android:textSize="28sp"
                 android:textColor="#2C3E50"
+                android:layout_gravity="bottom"
+
                 android:textStyle="bold"
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
@@ -38,6 +40,7 @@
                 android:contentDescription="Target illustration"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
                 android:layout_marginEnd="16dp"/>
 
         </LinearLayout>

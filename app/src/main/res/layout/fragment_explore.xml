@@ -5,12 +5,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/background_primary"
     tools:context=".Explore.Explore_Fragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/white"
+        android:layout_height="70dp"
+        android:background="@color/background_secondary"
         >
 
         <androidx.appcompat.widget.Toolbar
@@ -19,15 +20,15 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
+                android:gravity="center"
                 android:layout_height="wrap_content">
                 <TextView
                     android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Explore"
-                    android:textColor="#202143"
+                    android:textColor="@color/text_color"
                     android:textStyle="bold"
                     android:textSize="26sp"/>
 
@@ -191,9 +192,9 @@
 
 
                             <ImageView
-                                android:layout_width="42dp"
-                                android:layout_height="42dp"
-                                android:src="@drawable/computer" />
+                                android:layout_width="100dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/computer_img" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -358,7 +359,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Free Master class"
+                                android:text="Free MasterClass"
                                 android:textColor="#202143"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -374,6 +375,76 @@
                     </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <!-- Notes -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="18dp"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFDAD7"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+
+                            >
+
+
+                            <ImageView
+                                android:layout_width="42dp"
+                                android:layout_height="47dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/note" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Free Study Material"
+                                android:textColor="#202143"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Video and Notes"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!-- Free Master class -->
+
             </LinearLayout>
 
         </LinearLayout>

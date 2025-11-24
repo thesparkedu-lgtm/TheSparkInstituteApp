@@ -25,6 +25,8 @@
                 android:layout_height="wrap_content"
                 android:text="DCA                          "
                 android:textSize="28sp"
+                android:layout_gravity="bottom"
+
                 android:textColor="#2C3E50"
                 android:textStyle="bold"
                 android:layout_centerVertical="true"
@@ -35,10 +37,12 @@
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:contentDescription="Target illustration"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginEnd="16dp"/>
+                android:layout_gravity="bottom"
+
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Target illustration" />
 
         </LinearLayout>
 

@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
     app:cardCornerRadius="16dp"
-    app:cardElevation="2dp"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
     app:cardBackgroundColor="#FFF9E6">
 
     <RelativeLayout
@@ -19,7 +20,8 @@
             android:layout_height="wrap_content"
             android:text="Course Name"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/text_disabled"/>
 
         <ImageView
             android:id="@+id/btnRemove"
@@ -36,7 +38,7 @@
             android:layout_below="@id/tvCourseName"
             android:layout_marginTop="4dp"
             android:text="0% Completed"
-            android:textColor="#666666"
+            android:textColor="@color/text_disabled"
             android:textSize="12sp" />
 
         <ProgressBar

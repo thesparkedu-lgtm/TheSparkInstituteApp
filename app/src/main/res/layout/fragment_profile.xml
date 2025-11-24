@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_primary"
     android:orientation="vertical"
-    android:background="#F5F5F5">
+
+    >
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/white"
+        android:layout_height="70dp"
+        android:background="@color/background_secondary"
         >
 
         <androidx.appcompat.widget.Toolbar
@@ -17,15 +20,15 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
                 <TextView
                     android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Profile"
-                    android:textColor="#202143"
+                    android:textColor="@color/text_color"
                     android:textStyle="bold"
                     android:textSize="26sp"/>
 
@@ -34,12 +37,25 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
     <LinearLayout
         android:id="@+id/courseContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        >
 
         <!-- Profile Card -->
         <androidx.cardview.widget.CardView
@@ -47,7 +63,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="16dp"
-            app:cardElevation="4dp">
+            android:layout_margin="12dp"
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -61,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="right"
-                >
+                tools:ignore="RtlHardcoded">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvMenuIcon"
@@ -108,7 +125,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="16dp"
                     android:text="User Name"
-                    android:textColor="#000000"
+                    android:textColor="@color/text_color"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -130,7 +147,7 @@
                     android:layout_below="@id/tvProfileEmail"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="16dp"
-                    android:backgroundTint="#FFD700"
+                    android:background="@drawable/btn_radus"
                     android:drawableStart="@android:drawable/ic_menu_edit"
                     android:drawablePadding="8dp"
                     android:paddingStart="24dp"
@@ -149,7 +166,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:text="Your Courses"
-            android:textColor="#000000"
+            android:textColor="@color/text_color"
+            android:layout_marginLeft="16dp"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -160,4 +178,6 @@
             android:orientation="vertical" />
 
     </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

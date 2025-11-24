@@ -2,30 +2,109 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TheSparkInstituteApp" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">#856F02</item>
-        <item name="colorSecondary">#856F02</item>
-        <item name="background">@color/backgroung_black</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/Secondary</item>
+        <item name="background">@color/white</item>
+        <item name="cardBackgroundColor">@color/backgroung_wite</item>
+        <item name="appBarLayoutStyle">@style/MyAppBarStyle</item>
+        <item name="appBarLayoutStyle">@style/Theme.MyApp</item>
+        <item name="indicatorColor">@color/active_indicator_color</item>
+        <item name="bottomNavigationStyle">@color/bottom_nav_item_color_trancprent</item>
 
 
 
+
+    </style>
+
+    <style name="MyAppBarStyle" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/appbar_color</item>
+        <item name="titleTextColor">@color/appbar_text_color</item>
+    </style>
+
+    <style name="Theme.MyApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">@color/bottom_nav_color</item>
+        <item name="android:navigationBarDividerColor">@color/bottom_nav_item_color_trancprent</item>
+
+        <item name="bottomNavigationStyle">@style/MyBottomNavStyle</item>
+    </style>
+
+    <style name="MyBottomNavStyle" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/bottom_nav_color</item>
+        <item name="itemIconTint">@color/bottom_nav_item_color</item>
+        <item name="itemTextColor">@color/bottom_nav_item_color</item>
+    </style>
+
+    <style name="ActiveIndicatorShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 
     <style name="Theme.TheSparkInstituteApp" parent="Base.Theme.TheSparkInstituteApp" />
 
     <style name="nevbar_bacround">
-
+        <item name="background">@color/backgroung_wite</item>
     </style>
     <style name="background_page">
         <item name="background">@color/backcolor</item>
     </style>
 
-    <style name="background_page_secondary">
+    <style name="background_page_card">
         <item name="background">@color/backgroung_wite</item>
     </style>
-
 
     <!--  Text Color -->
         <color name="text_color">#000000</color>
          <color name="text_Secondary">#666666</color>
+
+    <color name="nev_bacround">#CDCDCD</color>
+
+
+    <color name="appbar_color">#FFD000</color> <!-- Light mode color -->
+    <color name="appbar_text_color">#000000</color>
+
+    <color name="bottom_nav_color">#666666</color> <!-- Light mode Bottom Navigation Bar color  color -->
+    <color name="bottom_nav_item_color">@color/Secondary</color>
+    <color name="bottom_nav_item_color_trancprent">#00FFFFFF</color>
+    <color name="active_indicator_color">#3E3754</color> <!-- your purple shade -->
+
+
+    <!-- Primary Colors -->
+    <color name="primary_yellow">#F0E000</color>
+    <color name="primary_yellow_pressed">#D4C700</color>
+    <color name="olive_green">#7A7F5A</color>
+    <color name="light_olive">#9A9F7A</color>
+
+    <!-- Background Colors -->
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_secondary">#F5F5F5</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="background_elevated">#FAFAFA</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1C1C1E</color>
+    <color name="text_secondary">#6E6E73</color>
+    <color name="text_tertiary">#A0A0A5</color>
+    <color name="text_disabled">#C7C7CC</color>
+
+    <!-- UI Element Colors -->
+    <color name="divider">#E5E5EA</color>
+    <color name="border">#D1D1D6</color>
+    <color name="search_background">#F0F0F5</color>
+    <color name="tag_background">#F0F0F5</color>
+
+    <!-- Status Colors -->
+    <color name="success_green">#34C759</color>
+    <color name="error_red">#FF3B30</color>
+    <color name="warning_orange">#FF9500</color>
+    <color name="info_blue">#007AFF</color>
+
+    <!-- Icon Colors -->
+    <color name="icon_active">#F0E000</color>
+    <color name="icon_inactive">#6E6E73</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_teal">#0A4D5C</color>
+    <color name="gradient_orange">#D64A2E</color>
+
 
 </resources>

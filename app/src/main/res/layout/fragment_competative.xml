@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#D264FA">
+    android:background="#E2F2E2">
 
     <!-- Header Section with Purple Gradient -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:orientation="horizontal"
-        android:background="@drawable/liner_compatitive"
+        android:background="@drawable/liner_coaching"
         >
 
         <LinearLayout
@@ -43,11 +43,10 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="200dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginTop="50dp"
-                android:layout_marginStart="60dp"
-                android:src="@drawable/competitive">
+                android:src="@drawable/competitive_img">
 
             </ImageView>
         </LinearLayout>
@@ -114,7 +113,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E8D5FF">
+                    app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
                         android:id="@+id/agniveerBtn"
@@ -122,7 +121,7 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:background="@drawable/outline_compatitive"
+                        android:background="@drawable/outline_coaching"
 
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
@@ -145,7 +144,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E8D5FF">
+                    app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
                         android:id="@+id/SSC_GD"
@@ -154,7 +153,7 @@
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:paddingStart="24dp"
-                        android:background="@drawable/outline_compatitive"
+                        android:background="@drawable/outline_coaching"
                         android:paddingEnd="24dp">
 
                         <TextView
@@ -175,7 +174,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E8D5FF">
+                    app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
                         android:id="@+id/WB_Pollice"
@@ -184,7 +183,7 @@
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:paddingStart="24dp"
-                        android:background="@drawable/outline_compatitive"
+                        android:background="@drawable/outline_coaching"
                         android:paddingEnd="24dp">
 
                         <TextView
@@ -205,7 +204,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E8D5FF">
+                    app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
                         android:id="@+id/Railway"
@@ -213,7 +212,7 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:background="@drawable/outline_compatitive"
+                        android:background="@drawable/outline_coaching"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
@@ -235,7 +234,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E8D5FF">
+                    app:cardBackgroundColor="#E2F2E2">
 
                     <LinearLayout
                         android:id="@+id/Indian_army"
@@ -243,7 +242,7 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:background="@drawable/outline_compatitive"
+                        android:background="@drawable/outline_coaching"
 
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">

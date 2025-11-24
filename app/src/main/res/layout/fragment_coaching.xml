@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E2F2E2">
+    android:background="#D264FA">
 
     <!-- Header Section with Purple Gradient -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:orientation="horizontal"
-        android:background="@drawable/liner_coaching"
+        android:background="@drawable/liner_compatitive"
         >
 
         <LinearLayout
@@ -127,7 +127,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E2F2E2">
+                    app:cardBackgroundColor="#E8D5FF">
 
                     <LinearLayout
                         android:id="@+id/class12Btn"
@@ -135,7 +135,7 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:background="@drawable/outline_coaching"
+                        android:background="@drawable/outline_compatitive"
 
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
@@ -158,7 +158,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E2F2E2">
+                    app:cardBackgroundColor="#E8D5FF">
 
                     <LinearLayout
                         android:id="@+id/science11_12Btn"
@@ -167,7 +167,7 @@
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:paddingStart="24dp"
-                        android:background="@drawable/outline_coaching"
+                        android:background="@drawable/outline_compatitive"
                         android:paddingEnd="24dp">
 
                         <TextView
@@ -198,7 +198,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E2F2E2">
+                    app:cardBackgroundColor="#E8D5FF">
 
                     <LinearLayout
                         android:id="@+id/scienceBTn"
@@ -207,7 +207,7 @@
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:paddingStart="24dp"
-                        android:background="@drawable/outline_coaching"
+                        android:background="@drawable/outline_compatitive"
                         android:paddingEnd="24dp">
 
                         <TextView
@@ -228,7 +228,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E2F2E2">
+                    app:cardBackgroundColor="#E8D5FF">
 
                     <LinearLayout
                         android:id="@+id/mathBtn"
@@ -236,7 +236,7 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:background="@drawable/outline_coaching"
+                        android:background="@drawable/outline_compatitive"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">
 
@@ -258,7 +258,7 @@
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="28dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#E2F2E2">
+                    app:cardBackgroundColor="#E8D5FF">
 
                     <LinearLayout
                         android:id="@+id/englishFocusBTn"
@@ -266,7 +266,7 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        android:background="@drawable/outline_coaching"
+                        android:background="@drawable/outline_compatitive"
 
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp">

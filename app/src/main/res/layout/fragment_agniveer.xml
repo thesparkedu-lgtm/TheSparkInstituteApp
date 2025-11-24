@@ -22,6 +22,8 @@
             <TextView
                 android:id="@+id/titleText"
                 android:layout_width="wrap_content"
+                android:layout_gravity="bottom"
+
                 android:layout_height="wrap_content"
                 android:text="Agniveer                "
                 android:textSize="28sp"
@@ -38,6 +40,8 @@
                 android:contentDescription="Target illustration"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
+
                 android:layout_marginEnd="16dp"/>
 
         </LinearLayout>

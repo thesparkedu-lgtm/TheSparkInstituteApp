@@ -28,6 +28,8 @@
                 android:layout_marginStart="16dp"
                 android:text="Spoken English + Basic Computer"
                 android:textColor="#2C3E50"
+                android:layout_gravity="bottom"
+
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -38,6 +40,8 @@
                 android:contentDescription="Target illustration"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
+
                 android:layout_marginEnd="16dp"/>
 
         </LinearLayout>
