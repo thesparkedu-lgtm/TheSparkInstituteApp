@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.example.thesparkinstituteapp.Courses_Classes.Courses_Classes_Activity
 import com.example.thesparkinstituteapp.R
+import com.example.thesparkinstituteapp.Video_Classes.VideoFragment
 
 
 class Computer_Fragment : Fragment() {
@@ -33,77 +34,63 @@ class Computer_Fragment : Fragment() {
         val spokenEng_Comp = view.findViewById<LinearLayout>(R.id.SpokenEng_CompBtn)
 
         spokenEnglish.setOnClickListener {
-            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","SpokenEnglish")
-            startActivity(intent)
+            openFragment(SpokenEnglish())
         }
 
         spokenEng_Comp.setOnClickListener {
-            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","SpokenEnglish_BasicComputer")
-            startActivity(intent)
+           openFragment(SpokenEnglish_BasicComputer())
         }
 
         python.setOnClickListener {
-            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","Python")
-            startActivity(intent)
+            openFragment(Python_Fragment())
         }
 
         ADCA.setOnClickListener {
-            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","ADCA")
-            startActivity(intent)
+           openFragment(ADCA_Fragment())
         }
 
         DCA.setOnClickListener {
-            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","DCA")
-            startActivity(intent)
+            openFragment(DCA_Fragment())
         }
 
         Java.setOnClickListener {
-            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","Java")
-            startActivity(intent)
+           openFragment(Java_Fragment())
         }
 
         Kotlin.setOnClickListener {
-            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","Kotlin")
-            startActivity(intent)
+           openFragment(Kotlin_Fragment())
         }
 
         Android_Development.setOnClickListener {
-            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","Android_Development")
-            startActivity(intent)
+            openFragment(Android_Development())
         }
 
         VideoEditing.setOnClickListener {
-            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","VideoEditing")
-            startActivity(intent)
+           openFragment(VideoFragment())
         }
 
        Graphic.setOnClickListener {
-           val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-           intent.putExtra("fragmentToLoad","Graphic")
-           startActivity(intent)
+           openFragment(Graphic_Fragment())
        }
 
         webDesign.setOnClickListener {
-            val intent = Intent(requireContext(), Courses_Classes_Activity::class.java)
-            intent.putExtra("fragmentToLoad","webDesign")
-
-
+           openFragment(Web_design())
         }
-
-
-
 
         return view
     }
+    fun openFragment(frag: Fragment){
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.setCustomAnimations(
+            R.anim.fade_slide_in_left,
+            R.anim.fade_slide_out_left,
+            R.anim.fade_slide_in_right,
+            R.anim.fade_slide_out_right
 
+        )
+        transaction.replace(R.id.fragment_container_2, frag)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
 
 }

@@ -1,54 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:scrollbars="none"
-    android:orientation="vertical"
     tools:context=".error">
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:scrollbars="vertical"
-        android:background="@color/background_secondary"
-        android:layout_height="70dp"
-        >
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_margin="18dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/spark_logo"/>
-
-            </LinearLayout>
-
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <!-- Top Header Bar -->
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none">
+            android:layout_height="wrap_content"
+            android:background="#FFF8E1"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@color/background_primary">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:src="@drawable/spark_logo"
+                    android:contentDescription="Spark Institute Logo"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,7 +63,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             app:cardCornerRadius="16dp"
-            android:background="@color/background_elevated"
             app:cardElevation="4dp">
 
             <ViewFlipper
@@ -127,7 +116,7 @@
             android:text="All Courses"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/text_color"
+            android:textColor="#333333"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="12dp"/>
@@ -174,7 +163,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="end|top"
-                            android:src="@drawable/navodaya_img"
                             android:contentDescription="Navodaya icon"/>
 
                     </LinearLayout>
@@ -194,7 +182,8 @@
                         android:id="@+id/CompetitiveBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#B5FFB5"
+                        android:background="#F2DDF8
+"
                         android:orientation="horizontal"
                         android:gravity="center">
 
@@ -210,7 +199,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="10dp"
-                            android:src="@drawable/competitive_img"
+                            android:src="@drawable/competitive"
                             android:contentDescription="Navodaya icon"/>
 
                     </LinearLayout>
@@ -255,7 +244,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="end|top"
-                            android:src="@drawable/computer_img"
                             android:contentDescription="Navodaya icon"/>
 
                     </LinearLayout>
@@ -275,7 +263,7 @@
                         android:id="@+id/CoachingBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#F2DDF8"
+                        android:background="#B5FFB5"
                         android:orientation="horizontal"
                         android:gravity="center">
 
@@ -328,15 +316,13 @@
                             android:layout_height="wrap_content"
                             android:text="Notes"
                             android:textSize="16sp"
-                            android:gravity=""
                             android:layout_marginStart="8dp"
                             android:textStyle="bold"
                             android:textColor="#333333"/>
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:layout_gravity="right|center"
-                            android:src="@drawable/note_img"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end|top"
                             android:contentDescription="Navodaya icon"/>
                     </LinearLayout>
 
@@ -397,7 +383,7 @@
                 android:text="Spark Class"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="@color/text_color"/>
+                android:textColor="#333333"/>
 
             <TextView
                 android:id="@+id/viewAllText"
@@ -406,7 +392,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:text="View all"
-                android:textColor="@color/info_blue"
+                android:textColor="#7B68EE"
                 android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -702,7 +688,7 @@
             android:text="Featured Tutors"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/text_color" />
+            android:textColor="#000000" />
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -745,14 +731,14 @@
                         android:text="Erick Xalxo"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:textColor="@color/text_color" />
+                        android:textColor="#000000" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Computer Educator"
                         android:textSize="11sp"
-                        android:textColor="@color/text_secondary" />
+                        android:textColor="#666666" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="100dp"
@@ -782,14 +768,14 @@
                         android:text="Ayush Pokhrel"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:textColor="@color/text_color" />
+                        android:textColor="#000000" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Computer Educator"
                         android:textSize="11sp"
-                        android:textColor="@color/text_secondary" />
+                        android:textColor="#666666" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="100dp"
@@ -818,14 +804,14 @@
                         android:text="Deepshikha"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:textColor="@color/text_color" />
+                        android:textColor="#000000" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Academic Head"
                         android:textSize="11sp"
-                        android:textColor="@color/text_secondary" />
+                        android:textColor="#666666" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="100dp"
@@ -854,14 +840,14 @@
                         android:text="Ankit Dutta"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:textColor="@color/text_color" />
+                        android:textColor="#000000" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bangla Educator"
                         android:textSize="11sp"
-                        android:textColor="@color/text_secondary" />
+                        android:textColor="#666666" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="100dp"
@@ -889,14 +875,14 @@
                         android:text="Ronit Roka"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:textColor="@color/text_color" />
+                        android:textColor="#000000" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Edting Expert"
                         android:textSize="11sp"
-                        android:textColor="@color/text_secondary" />
+                        android:textColor="#666666" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="100dp"
@@ -924,14 +910,14 @@
                         android:text="Ronit Roka"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:textColor="@color/text_color" />
+                        android:textColor="#000000" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Edting Expert"
                         android:textSize="11sp"
-                        android:textColor="@color/text_secondary" />
+                        android:textColor="#666666" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="100dp"
@@ -1014,7 +1000,4 @@
 
     </LinearLayout>
 
-    </ScrollView>
-
-</LinearLayout>
-</LinearLayout>
+</ScrollView>

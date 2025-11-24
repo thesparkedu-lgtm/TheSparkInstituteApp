@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fullMapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Recenter Button -->
+    <ImageView
+        android:id="@+id/btnRecenter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/map_precision"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:padding="10dp"
+        android:layout_gravity="bottom|end" />
+
+    <!-- Map Type Switch -->
+    <ImageView
+        android:id="@+id/btnMapType"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/map_types"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:padding="10dp"
+        android:layout_gravity="bottom|start" />
+
+    <!-- Open in Google Maps -->
+    <ImageView
+        android:id="@+id/btnOpenInMaps"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/map_icon"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:padding="10dp"
+        android:layout_gravity="top|end" />
+
+</FrameLayout>

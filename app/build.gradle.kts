@@ -68,6 +68,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.play.services.maps)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -76,6 +77,9 @@ dependencies {
     // glide and youtubePlayer
     implementation("com.github.bumptech.glide:glide:5.0.5")
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:13.0.0")
+
+    // google maps
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
 }
 
 

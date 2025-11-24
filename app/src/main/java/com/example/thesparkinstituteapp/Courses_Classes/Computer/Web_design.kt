@@ -7,12 +7,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
+import com.example.thesparkinstituteapp.Courses_Classes.Novodaya.FullMapFragment
 import com.example.thesparkinstituteapp.R
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.MapView
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
 
-class Web_design : Fragment() {
+class Web_design : Fragment() , OnMapReadyCallback {
+
+    lateinit var smallMapView: MapView
+    lateinit var googleMap: GoogleMap
+
+    lateinit var  btnOpenFullMap: ImageView
+
+    val instituteLocation = LatLng(26.793823, 89.023983)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,10 +40,43 @@ class Web_design : Fragment() {
         whatsappButton.setOnClickListener {
             openWhatsApp()
         }
+        btnOpenFullMap = view.findViewById(R.id.btnOpenFullMap)
 
+        // Small Google Map
+        smallMapView = view.findViewById(R.id.smallMapView)
+        smallMapView.onCreate(savedInstanceState)
+        smallMapView.getMapAsync(this)
+
+        // Open full map fragment
+        btnOpenFullMap.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container_2, FullMapFragment())
+                .addToBackStack(null)
+                .commit()
+        }
         return view
     }
+    override fun onMapReady(map: GoogleMap) {
+        googleMap = map
 
+        with(googleMap.uiSettings) {
+            isZoomControlsEnabled = false
+            isScrollGesturesEnabled = true
+            isZoomGesturesEnabled = true
+        }
+
+        googleMap.addMarker(
+            MarkerOptions().position(instituteLocation).title("The Spark Institute")
+        )
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(instituteLocation, 15f))
+    }
+
+    override fun onStart() { super.onStart(); smallMapView.onStart() }
+    override fun onResume() { super.onResume(); smallMapView.onResume() }
+    override fun onPause() { super.onPause(); smallMapView.onPause() }
+    override fun onStop() { super.onStop(); smallMapView.onStop() }
+    override fun onDestroy() { super.onDestroy(); smallMapView.onDestroy() }
+    override fun onLowMemory() { super.onLowMemory(); smallMapView.onLowMemory() }
 
     fun openWhatsApp() {
         val phoneNumber = "919832116164"
