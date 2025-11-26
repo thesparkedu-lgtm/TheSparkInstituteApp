@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
+import com.example.thesparkinstituteapp.Courses_Classes.MyTranslationFragment
 import com.example.thesparkinstituteapp.Courses_Classes.Novodaya.FullMapFragment
 import com.example.thesparkinstituteapp.R
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -20,7 +21,18 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 
-class Python_Fragment : Fragment() , OnMapReadyCallback {
+class Python_Fragment :MyTranslationFragment(R.layout.fragment_python_) , OnMapReadyCallback {
+
+    override val contentTextViewIds: List<Int> = listOf(
+        R.id.tv1,
+        R.id.tv2,
+        R.id.tv3,
+        R.id.tv4,
+        R.id.tv5,
+    )
+
+    // 2. Specify the ID of the container holding your buttons
+    override val buttonContainerId: Int = R.id.translation_buttons
 
     lateinit var smallMapView: MapView
     lateinit var googleMap: GoogleMap

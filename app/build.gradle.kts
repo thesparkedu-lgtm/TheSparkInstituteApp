@@ -80,6 +80,16 @@ dependencies {
 
     // google maps
     implementation("com.google.android.gms:play-services-maps:18.2.0")
+
+    // ML Kit Translation API (dynamically downloaded model)
+    implementation("com.google.mlkit:translate:17.0.3")
+    // ML Kit Language Identification API
+    implementation("com.google.mlkit:language-id:17.0.6")
+    // Recommended to use Kotlin coroutine extensions for Task-based APIs
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.10.2")
+
+
+
 }
 
 

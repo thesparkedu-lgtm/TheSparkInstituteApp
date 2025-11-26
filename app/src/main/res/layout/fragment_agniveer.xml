@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/translation_buttons"
+        layout="@layout/fragment_my_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"/>
+
+
+<ScrollView 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:fillViewport="true"
     android:background="#FFF8F0">
 
@@ -53,6 +68,7 @@
 
             <!-- About JNV -->
             <TextView
+                android:id="@+id/tv1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="An Agniveer is a young individual recruited into the Indian Armed Forces (Army, Navy, and Air Force) under the Agnipath scheme, a transformative defense recruitment policy. The scheme aims to create a more youthful, tech-savvy, and agile fighting force while reducing the defense pension bill"
@@ -63,6 +79,7 @@
 
             <!-- Eligibility Header -->
             <TextView
+                android:id="@+id/tv2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Recruitment"
@@ -73,6 +90,7 @@
 
             <!-- Residential Requirement -->
             <TextView
+                android:id="@+id/tv3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="The process is conducted via an all-India, merit-based online system for individuals aged 17.5 to 21 years (the upper age limit was relaxed to 23 as a one-time measure for the 2022 recruitment cycle)."
@@ -83,6 +101,7 @@
 
             <!-- Schooling Requirement -->
             <TextView
+                android:id="@+id/tv4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Service Tenure: Agniveers are recruited for a short service duration of four years, which includes a six-month training period."
@@ -93,6 +112,7 @@
 
             <!-- Age Limit -->
             <TextView
+                android:id="@+id/tv5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="After four years, up to 25% of Agniveers from each batch may be offered the opportunity to join the permanent cadre based on merit and organizational requirements. The remaining 75% will return to civil society with skill certificates and priority for various government jobs, including in Central Armed Police Forces (CAPFs) and Assam Rifles."
@@ -173,3 +193,4 @@
     </LinearLayout>
 
 </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

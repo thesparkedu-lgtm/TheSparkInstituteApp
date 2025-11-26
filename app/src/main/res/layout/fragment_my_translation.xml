@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/translation_button_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="4dp"
+    android:background="@drawable/flag_transparent"
+    android:padding="4dp">
+
+    <Button
+        android:id="@+id/btn_translate_hindi"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="हिन्"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_normal_shape"
+        android:textColor="@android:color/white"
+        />
+
+    <Button
+        android:id="@+id/btn_translate_bangla"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="বাং"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_normal_shape"
+        android:textColor="@android:color/white" />
+</LinearLayout>

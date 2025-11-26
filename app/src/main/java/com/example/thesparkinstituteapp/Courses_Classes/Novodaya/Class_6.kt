@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.thesparkinstituteapp.Courses_Classes.MyTranslationFragment
 import com.example.thesparkinstituteapp.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -18,7 +19,18 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-class Class_6 : Fragment(), OnMapReadyCallback {
+class Class_6 :MyTranslationFragment(R.layout.fragment_class_6) , OnMapReadyCallback {
+
+    override val contentTextViewIds: List<Int> = listOf(
+        R.id.tv1,
+        R.id.tv2,
+        R.id.tv3,
+        R.id.tv4,
+        R.id.tv5,
+    )
+
+    // 2. Specify the ID of the container holding your buttons
+    override val buttonContainerId: Int = R.id.translation_buttons
 
     lateinit var smallMapView: MapView
     lateinit var googleMap: GoogleMap

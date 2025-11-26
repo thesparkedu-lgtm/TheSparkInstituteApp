@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="#FFF8F0">
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/translation_buttons"
+        layout="@layout/fragment_my_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="#FFF8F0">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,6 +69,7 @@
 
             <!-- About JNV -->
             <TextView
+                android:id="@+id/tv1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Jawahar Navodaya Vidyalaya (JNV) Nagrakata is a government-operated, co-educational. The school was established to provide modern, high-quality, and free education to talented children, primarily from rural areas, regardless of their family's socioeconomic background."
@@ -64,6 +80,7 @@
 
             <!-- Eligibility Header -->
             <TextView
+                android:id="@+id/tv2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Eligibility criteria for JNVST Class 6 (2026-27)"
@@ -74,6 +91,7 @@
 
             <!-- Residential Requirement -->
             <TextView
+                android:id="@+id/tv3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Residential requirement: The candidate must be a resident of the same district asthe Jawahar Navodaya Vidyalaya to which they are applying."
@@ -84,6 +102,7 @@
 
             <!-- Schooling Requirement -->
             <TextView
+                android:id="@+id/tv4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Schooling: The candidate must be studying in Class 5 during the 2025-26 academic session at a recognized government or government-aided school in the same district."
@@ -94,6 +113,7 @@
 
             <!-- Age Limit -->
             <TextView
+                android:id="@+id/tv5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Age limit: The applicant's date of birth must fall between May 1, 2014, and July 31, 2016 (inclusive of both dates). This age range applies to all categories of candidates, including SC/ST."
@@ -173,3 +193,4 @@
     </LinearLayout>
 
 </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,8 +18,20 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.example.thesparkinstituteapp.Courses_Classes.MyTranslationFragment
 
-class Agniveer : Fragment(), OnMapReadyCallback {
+class Agniveer : MyTranslationFragment(R.layout.fragment_agniveer) , OnMapReadyCallback {
+
+    override val contentTextViewIds: List<Int> = listOf(
+        R.id.tv1,
+        R.id.tv2,
+        R.id.tv3,
+        R.id.tv4,
+        R.id.tv5,
+    )
+
+    // 2. Specify the ID of the container holding your buttons
+    override val buttonContainerId: Int = R.id.translation_buttons
 
     lateinit var smallMapView: MapView
     lateinit var googleMap: GoogleMap
@@ -31,7 +43,6 @@ class Agniveer : Fragment(), OnMapReadyCallback {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val view =  inflater.inflate(R.layout.fragment_agniveer, container, false)
 
         val whatsappButton = view.findViewById<LinearLayout>(R.id.WhatsappBtnAgniveer)
@@ -39,6 +50,7 @@ class Agniveer : Fragment(), OnMapReadyCallback {
         whatsappButton.setOnClickListener {
             openWhatsApp()
         }
+
         btnOpenFullMap = view.findViewById(R.id.btnOpenFullMap)
 
         // Small Google Map
@@ -55,7 +67,6 @@ class Agniveer : Fragment(), OnMapReadyCallback {
         }
         return view
     }
-
     override fun onMapReady(map: GoogleMap) {
         googleMap = map
 
@@ -92,4 +103,5 @@ class Agniveer : Fragment(), OnMapReadyCallback {
             Toast.makeText(requireContext(), "WhatsApp not installed!", Toast.LENGTH_SHORT).show()
         }
     }
+
 }
